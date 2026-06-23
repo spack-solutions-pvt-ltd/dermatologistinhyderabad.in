@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -23,13 +23,24 @@ export default function GallerySection() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const results = [
     {
       id: 1,
       title: "Hair Transplant — FUE",
-      beforeImage: Hair_Transplant_FUE_after,
-      afterImage: Hair_Transplant_FUE_before,
+      beforeImage: Hair_Transplant_FUE_before,
+      afterImage: Hair_Transplant_FUE_after,
       beforeColor: "from-[#d4c5b8] to-[#c4b5a8]",
       afterColor: "from-[#a8cce7] to-[#88b4d4]",
       hasImages: true,
@@ -37,8 +48,8 @@ export default function GallerySection() {
     {
       id: 2,
       title: "Acne Scar Revision",
-      beforeImage: Acne_Scar_Revision_CO2_MNRF_after,
-      afterImage: Acne_Scar_Revision_CO2_MNRF_before,
+      beforeImage: Acne_Scar_Revision_CO2_MNRF_before,
+      afterImage: Acne_Scar_Revision_CO2_MNRF_after,
       beforeColor: "from-[#d4b8a8] to-[#c4a898]",
       afterColor: "from-[#88d4b4] to-[#68c4a4]",
       hasImages: true,
@@ -46,8 +57,8 @@ export default function GallerySection() {
     {
       id: 3,
       title: "Pigmentation Treatment",
-      beforeImage: Pigmentation_Treatment_after,
-      afterImage: Pigmentation_Treatment_before,
+      beforeImage: Pigmentation_Treatment_before,
+      afterImage: Pigmentation_Treatment_after,
       beforeColor: "from-[#d4c0a8] to-[#c4b098]",
       afterColor: "from-[#f0d4b8] to-[#e0c4a8]",
       hasImages: true,
@@ -55,8 +66,8 @@ export default function GallerySection() {
     {
       id: 4,
       title: "Hair Regrowth — GFC + PRP",
-      beforeImage: Hair_Regrowth_GFC_PRP_after,
-      afterImage: Hair_Regrowth_GFC_PRP_before,
+      beforeImage: Hair_Regrowth_GFC_PRP_before,
+      afterImage: Hair_Regrowth_GFC_PRP_after,
       beforeColor: "from-[#c4b8a8] to-[#b4a898]",
       afterColor: "from-[#88c4d4] to-[#68b4c4]",
       hasImages: true,
@@ -64,8 +75,8 @@ export default function GallerySection() {
     {
       id: 5,
       title: "Anti-Aging — HIFU",
-      beforeImage: Acne_Scar_Revision_Case_2_after,
-      afterImage: Acne_Scar_Revision_Case_2_before,
+      beforeImage: Acne_Scar_Revision_Case_2_before,
+      afterImage: Acne_Scar_Revision_Case_2_after,
       beforeColor: "from-[#d4c8b8] to-[#c4b8a8]",
       afterColor: "from-[#d4a8c4] to-[#c498b4]",
       hasImages: true,
@@ -73,8 +84,8 @@ export default function GallerySection() {
     {
       id: 6,
       title: "Laser Tattoo Removal",
-      beforeImage: Hair_Regrowth_GFC_PRP_Case_3_after,
-      afterImage: Hair_Regrowth_GFC_PRP_Case_3_before,
+      beforeImage: Hair_Regrowth_GFC_PRP_Case_3_before,
+      afterImage: Hair_Regrowth_GFC_PRP_Case_3_after,
       beforeColor: "from-[#c4b0a8] to-[#b4a098]",
       afterColor: "from-[#d4c4a8] to-[#c4b498]",
       hasImages: true,
@@ -374,8 +385,8 @@ export default function GallerySection() {
                 border-[#e8e3de]
                 cursor-pointer
               "
-              onMouseEnter={() => setHoveredId(result.id)}
-              onMouseLeave={() => setHoveredId(null)}
+              onMouseEnter={() => !isMobile && setHoveredId(result.id)}
+              onMouseLeave={() => !isMobile && setHoveredId(null)}
             >
               {/* Image Container - Split View - Responsive height */}
               <div className="relative grid grid-cols-2 h-48 sm:h-56 md:h-64 lg:h-72 overflow-hidden">
@@ -389,11 +400,11 @@ export default function GallerySection() {
                 >
                   {result.hasImages ? (
                     <div className="relative w-full h-full overflow-hidden">
-                      {/* Current Image - Initially blurred, unblurs on hover */}
+                      {/* Current Image - Conditionally apply blur based on device */}
                       <motion.div
                         className="w-full h-full"
                         animate={
-                          hoveredId === result.id
+                          !isMobile && hoveredId === result.id
                             ? {
                                 x: "-120%",
                                 scale: 1.3,
@@ -404,7 +415,7 @@ export default function GallerySection() {
                                 x: "0%",
                                 scale: 1,
                                 opacity: 1,
-                                filter: "blur(4px)",
+                                filter: isMobile ? "blur(0px)" : "blur(4px)",
                               }
                         }
                         transition={{
@@ -420,11 +431,11 @@ export default function GallerySection() {
                         />
                       </motion.div>
                       
-                      {/* Incoming image - Initially blurred, unblurs on hover */}
+                      {/* Incoming image - Conditionally apply blur based on device */}
                       <motion.div
                         className="absolute inset-0 w-full h-full"
                         animate={
-                          hoveredId === result.id
+                          !isMobile && hoveredId === result.id
                             ? {
                                 x: "0%",
                                 scale: 1,
@@ -435,7 +446,7 @@ export default function GallerySection() {
                                 x: "120%",
                                 scale: 0.7,
                                 opacity: 0,
-                                filter: "blur(8px)",
+                                filter: isMobile ? "blur(0px)" : "blur(8px)",
                               }
                         }
                         transition={{
@@ -452,11 +463,11 @@ export default function GallerySection() {
                       </motion.div>
                       
                       {/* BEFORE Label */}
-                      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                         <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-red-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full backdrop-blur-sm">
                           BEFORE
                         </span>
-                      </div> */}
+                      </div>
                     </div>
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#d4c5b8] to-[#c4b5a8]">
@@ -478,11 +489,11 @@ export default function GallerySection() {
                 >
                   {result.hasImages ? (
                     <div className="relative w-full h-full overflow-hidden">
-                      {/* Current Image - Initially blurred, unblurs on hover */}
+                      {/* Current Image - Conditionally apply blur based on device */}
                       <motion.div
                         className="w-full h-full"
                         animate={
-                          hoveredId === result.id
+                          !isMobile && hoveredId === result.id
                             ? {
                                 x: "120%",
                                 scale: 1.3,
@@ -493,7 +504,7 @@ export default function GallerySection() {
                                 x: "0%",
                                 scale: 1,
                                 opacity: 1,
-                                filter: "blur(4px)",
+                                filter: isMobile ? "blur(0px)" : "blur(4px)",
                               }
                         }
                         transition={{
@@ -509,11 +520,11 @@ export default function GallerySection() {
                         />
                       </motion.div>
                       
-                      {/* Incoming image - Initially blurred, unblurs on hover */}
+                      {/* Incoming image - Conditionally apply blur based on device */}
                       <motion.div
                         className="absolute inset-0 w-full h-full"
                         animate={
-                          hoveredId === result.id
+                          !isMobile && hoveredId === result.id
                             ? {
                                 x: "0%",
                                 scale: 1,
@@ -524,7 +535,7 @@ export default function GallerySection() {
                                 x: "-120%",
                                 scale: 0.7,
                                 opacity: 0,
-                                filter: "blur(8px)",
+                                filter: isMobile ? "blur(0px)" : "blur(8px)",
                               }
                         }
                         transition={{
@@ -542,9 +553,9 @@ export default function GallerySection() {
                       
                       {/* AFTER Label */}
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-                        {/* <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-green-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full backdrop-blur-sm">
+                        <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-green-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full backdrop-blur-sm">
                           AFTER
-                        </span> */}
+                        </span>
                       </div>
                     </div>
                   ) : (

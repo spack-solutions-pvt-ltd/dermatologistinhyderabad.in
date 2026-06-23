@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
@@ -14,6 +14,17 @@ import image7 from "../asserts/image7.png";
 export default function PopularTreatments() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const treatments = [
     {
@@ -72,28 +83,31 @@ export default function PopularTreatments() {
     },
   ];
 
+  // Animation variants - disabled on mobile
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: isMobile ? 1 : 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: isMobile ? 0 : 0.1,
+        delayChildren: isMobile ? 0 : 0.2,
       },
     },
   };
 
   const cardVariants = {
     hidden: {
-      opacity: 0,
-      y: 40,
-      scale: 0.92,
+      opacity: isMobile ? 1 : 0,
+      y: isMobile ? 0 : 40,
+      scale: isMobile ? 1 : 0.92,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         type: "spring" as const,
         duration: 0.7,
         bounce: 0.3,
@@ -103,15 +117,17 @@ export default function PopularTreatments() {
 
   const titleVariants = {
     hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.8,
+      opacity: isMobile ? 1 : 0,
+      y: isMobile ? 0 : 50,
+      scale: isMobile ? 1 : 0.8,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         duration: 0.9,
         ease: "easeOut" as const,
         type: "spring" as const,
@@ -123,15 +139,17 @@ export default function PopularTreatments() {
 
   const subtitleVariants = {
     hidden: {
-      opacity: 0,
-      y: 30,
-      scale: 0.9,
+      opacity: isMobile ? 1 : 0,
+      y: isMobile ? 0 : 30,
+      scale: isMobile ? 1 : 0.9,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         duration: 0.7,
         ease: "easeOut" as const,
         delay: 0.2,
@@ -144,13 +162,15 @@ export default function PopularTreatments() {
 
   const underlineVariants = {
     hidden: {
-      width: 0,
-      opacity: 0,
+      width: isMobile ? "200px" : 0,
+      opacity: isMobile ? 1 : 0,
     },
     visible: {
       width: "200px",
       opacity: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         duration: 0.8,
         ease: "easeOut" as const,
         delay: 0.4,
@@ -163,15 +183,17 @@ export default function PopularTreatments() {
 
   const letterVariants = {
     hidden: {
-      opacity: 0,
-      y: 50,
-      rotateX: 90,
+      opacity: isMobile ? 1 : 0,
+      y: isMobile ? 0 : 50,
+      rotateX: isMobile ? 0 : 90,
     },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       rotateX: 0,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         duration: 0.6,
         ease: "easeOut" as const,
         delay: i * 0.05,
@@ -184,13 +206,15 @@ export default function PopularTreatments() {
 
   const imageVariants = {
     hidden: {
-      opacity: 0,
-      scale: 0.8,
+      opacity: isMobile ? 1 : 0,
+      scale: isMobile ? 1 : 0.8,
     },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         type: "spring" as const,
         duration: 0.6,
         bounce: 0.3,
@@ -201,13 +225,15 @@ export default function PopularTreatments() {
 
   const textVariants = {
     hidden: {
-      opacity: 0,
-      y: 20,
+      opacity: isMobile ? 1 : 0,
+      y: isMobile ? 0 : 20,
     },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         duration: 0.5,
         ease: "easeOut" as const,
         delay: 0.2,
@@ -217,13 +243,15 @@ export default function PopularTreatments() {
 
   const buttonVariants = {
     hidden: {
-      opacity: 0,
-      scale: 0.9,
+      opacity: isMobile ? 1 : 0,
+      scale: isMobile ? 1 : 0.9,
     },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
+      transition: isMobile ? {
+        duration: 0,
+      } : {
         type: "spring" as const,
         duration: 0.5,
         bounce: 0.3,
@@ -255,6 +283,67 @@ export default function PopularTreatments() {
           font-weight: 600;
           letter-spacing: 0.5px;
         }
+
+        /* Disable ALL hover effects and transitions on mobile */
+        @media (max-width: 767px) {
+          .group {
+            transition: none !important;
+          }
+          .group * {
+            transition: none !important;
+          }
+          .group-hover\\:sm\\:-translate-y-4 {
+            transform: none !important;
+          }
+          .group-hover\\:sm\\:scale-\\[1\\.02\\] {
+            transform: none !important;
+          }
+          .group-hover\\:sm\\:shadow-2xl {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          }
+          .group-hover\\:sm\\:shadow-\\[\\#154f85\\]\\/10 {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          }
+          .group-hover\\:sm\\:text-\\[\\#154f85\\] {
+            color: inherit !important;
+          }
+          .sm\\:hover\\:scale-105 {
+            transform: none !important;
+          }
+          .group-hover\\:sm\\:shadow-lg {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          }
+          .group-hover\\:sm\\:shadow-\\[\\#154f85\\]\\/30 {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          }
+          .group-hover\\:scale-110 {
+            transform: scale(1) !important;
+          }
+          .group-hover\\:rotate-6 {
+            transform: none !important;
+          }
+          .hover\\:scale-\\[1\\.02\\] {
+            transform: none !important;
+          }
+          .group-hover\\:opacity-100 {
+            opacity: 0 !important;
+          }
+          .group-hover\\:opacity-100\\.transition-opacity {
+            opacity: 0 !important;
+          }
+          .duration-300, .duration-500, .duration-700, .duration-1000 {
+            transition-duration: 0s !important;
+          }
+          .transition-all, .transition-transform, .transition-opacity {
+            transition: none !important;
+          }
+          .hover\\:shadow-\\[\\#154f85\\]\\/30 {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+          }
+          .hover\\:scale-105 {
+            transform: none !important;
+          }
+        }
       `}</style>
 
       <div className="relative">
@@ -270,7 +359,7 @@ export default function PopularTreatments() {
       </div>
 
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10 relative z-10">
-        {/* Enhanced Animated Heading */}
+        {/* Enhanced Animated Heading - Disabled on mobile */}
         <motion.div
           className="text-center mb-8 sm:mb-10 md:mb-16"
           initial="hidden"
@@ -324,13 +413,7 @@ export default function PopularTreatments() {
                 rounded-2xl sm:rounded-3xl
                 overflow-hidden
                 shadow-sm sm:shadow-md
-                hover:sm:shadow-2xl
-                transition-all
-                duration-300 sm:duration-500
-                hover:sm:-translate-y-4
-                hover:sm:scale-[1.02]
                 ${treatment.borderColor}
-                hover:sm:shadow-[#154f85]/10
                 relative
                 flex-shrink-0
               `}
@@ -348,11 +431,11 @@ export default function PopularTreatments() {
                       src={treatment.image}
                       alt={treatment.name}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="object-cover"
                     />
                   ) : (
                     <div className={`w-full h-full bg-gradient-to-br ${treatment.gradient} flex items-center justify-center`}>
-                      <div className="text-5xl sm:text-6xl md:text-7xl transform group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                      <div className="text-5xl sm:text-6xl md:text-7xl">
                         {treatment.emoji}
                       </div>
                     </div>
@@ -374,9 +457,6 @@ export default function PopularTreatments() {
                     mb-3 sm:mb-4
                     leading-tight
                     min-h-[44px] sm:min-h-[50px] md:min-h-[56px]
-                    group-hover:sm:text-[#154f85]
-                    transition-colors
-                    duration-300
                   "
                   dangerouslySetInnerHTML={{ __html: treatment.title }}
                 />
@@ -399,15 +479,10 @@ export default function PopularTreatments() {
                     text-xs sm:text-sm
                     text-white
                     overflow-hidden
-                    transition-all
-                    duration-300
-                    hover:scale-[1.02] sm:hover:scale-105
-                    group-hover:sm:shadow-lg
-                    group-hover:sm:shadow-[#154f85]/30
                   "
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out hidden sm:block"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7]"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full hidden sm:block"></span>
                   <Calendar size={14} className="relative z-10 sm:w-[16px] sm:h-[16px]" />
                   <span className="relative z-10">Book Now</span>
                 </motion.a>
@@ -418,4 +493,4 @@ export default function PopularTreatments() {
       </div>
     </section>
   );
-} 
+}

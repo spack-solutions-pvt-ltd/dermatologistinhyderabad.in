@@ -164,13 +164,13 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Fixed visibility */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="lg:hidden p-1.5 rounded-xl bg-[#154f85] text-white hover:bg-[#1a5f9a] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
@@ -201,12 +201,6 @@ export default function Header() {
               </a>
               <a
                 href="https://www.aakrithiskinandhairclinic.com/"
-                onClick={(e) =>
-                  handleNavClick(
-                    e,
-                    "https://www.aakrithiskinandhairclinic.com/y",
-                  )
-                }
                 className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
               >
                 <Calendar size={16} />
