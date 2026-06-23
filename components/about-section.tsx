@@ -340,7 +340,7 @@ export default function AboutSection() {
             </div>
 
             {/* Decorative Badge with Gradient Effect */}
-            <motion.div
+            {/* <motion.div
               className="
                 absolute
                 -bottom-4
@@ -370,7 +370,7 @@ export default function AboutSection() {
                   <div className="sans-font text-xs text-[#5a6879]">FDA Approved</div>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </div>

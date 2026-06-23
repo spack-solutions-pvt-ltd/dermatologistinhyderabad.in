@@ -42,7 +42,7 @@ export default function FAQSection() {
       id: 5,
       question: "Is laser hair reduction safe for Indian skin?",
       answer:
-        "Yes. We use US-FDA cleared diode laser technology specifically suited for Indian and darker skin tones. With proper energy settings and trained operators, the procedure is safe, virtually painless, and effective across all skin types.",
+        "Yes. We use US FDA-cleared diode laser technology suitable for Indian and darker skin tones. The treatment is performed with appropriate energy settings under trained supervision. Most patients find it comfortable, and results may vary depending on hair type, skin type, and treatment consistency.",
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ export default function FAQSection() {
       id: 7,
       question: "Will I see results from a single session?",
       answer:
-        "Some treatments — like Hydrafacial or skin tag removal — show visible results from the first session. Most clinical concerns (acne, pigmentation, hair fall, hair transplant) follow a structured multi-session plan, and your dermatologist will share a realistic timeline upfront.",
+        "Some treatments — like HydraFacial or skin tag removal — show visible results from the first session. Most clinical concerns (acne, pigmentation, hair fall, hair transplant) follow a structured multi-session plan, and your dermatologist will share a realistic timeline upfront.",
     },
   ];
 

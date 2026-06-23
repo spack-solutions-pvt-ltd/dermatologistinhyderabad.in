@@ -35,7 +35,7 @@ export default function ContactSection() {
       name: "Visakhapatnam — Maddilapalem Branch",
       address: (
         <>
-          Andhra Bank Road, Pitapuram Colony,
+          Andhra Bank Road, Pithapuram Colony,
           <br />
           Opp CMR Central, Maddilapalem,
           <br />
@@ -48,7 +48,7 @@ export default function ContactSection() {
       emailLink: "mailto:info@aakrithiskinandhairclinic.com",
       hours: "Mon–Sat, 10 AM – 9 PM",
       sunday: null,
-      rating: "4.7★ (Justdial)",
+      // rating: "4.9★ (Google Maps)",
       mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.472!2d83.309!3d17.738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMaddilapalem%2C%20Visakhapatnam!5e0!3m2!1sen!2sin!4v1700000000000",
     },
   ];
@@ -257,12 +257,12 @@ export default function ContactSection() {
                       <b>Sunday:</b> {location.sunday}
                     </span>
                   )}
-                  {location.rating && (
+                  {/* {location.rating && (
                     <span className="flex items-center gap-1.5">
                       <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                       {location.rating}
                     </span>
-                  )}
+                  )} */}
                 </div>
               </div>
 

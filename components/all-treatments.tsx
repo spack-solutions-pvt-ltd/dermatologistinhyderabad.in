@@ -87,13 +87,13 @@ export default function AllTreatments() {
       icon: X,
       name: "Tattoo Removal",
       description:
-        "Q-Switched laser tattoo removal across all colors and skin types.",
+        "Suitability depends on tattoo colour, depth and skin type.",
       category: "Laser",
     },
     {
       id: 9,
       icon: Sparkles,
-      name: "Hydrafacial & Glow",
+      name: "HydraFacial & Glow",
       description:
         "Medical-grade facials for instant cleanse, hydration and radiance.",
       category: "Skin",

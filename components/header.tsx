@@ -114,24 +114,24 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-[72px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="w-9 h-9 md:w-11 md:h-11 rounded-lg overflow-hidden flex-shrink-0">
+          <Link href="/" className="flex items-center gap-1">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
               <Image
                 src={logo}
                 alt="Aakrithi Skin & Hair Clinic"
-                width={44}
-                height={44}
-                className="w-full h-full object-cover"
+                width={56}
+                height={56}
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 priority
               />
             </div>
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden flex-shrink-0">
+            <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
               <Image
                 src={logo1}
                 alt="Aakrithi Skin & Hair Clinic"
-                width={56}
-                height={56}
-                className="w-full h-full object-cover"
+                width={112}
+                height={112}
+                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 priority
               />
             </div>

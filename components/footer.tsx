@@ -5,6 +5,7 @@ import Link from "next/link";
 import logo from "../asserts/logo.png";
 import logo1 from "../asserts/logo1.png";
 import logo2 from "../asserts/logo2.png";
+import logo4 from "../asserts/logo4.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -78,25 +79,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Column 1 - Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            {/* Brand Row with Logos */}
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden flex-shrink-0">
+            {/* Brand Row with Logos - Adjusted */}
+            <Link href="/" className="flex items-center mb-4">
+              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
                 <Image
                   src={logo2}
                   alt="Aakrithi Skin & Hair Clinic"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-cover"
+                  width={56}
+                  height={56}
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
                 />
               </div>
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-lg overflow-hidden flex-shrink-0">
+              <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden flex-shrink-0 p-1.5   ">
                 <Image
-                  src={logo1}
+                  src={logo4}
                   alt="Aakrithi Skin & Hair Clinic"
-                  width={56}
-                  height={56}
-                  className="w-full h-full object-cover"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
                 />
               </div>
@@ -199,9 +200,7 @@ export default function Footer() {
             {/* Visakhapatnam */}
             <div className="mb-3">
               <p className="sans-font text-sm">
-                <span className="text-white font-semibold">
-                  Visakhapatnam:
-                </span>{" "}
+                <span className="text-white font-semibold">Visakhapatnam:</span>{" "}
                 Maddilapalem
               </p>
               <a

@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
     {
       icon: Shield,
       title: "Long-Term<br />Results",
-      description: "Focus on safe, effective and lasting results.",
+      description: "Safe, sustainable outcomes with realistic timelines.",
     },
   ];
 
