@@ -76,8 +76,8 @@ export default function Hero() {
         <div className="max-w-7xl mx-auto w-full px-3 sm:px-4 lg:px-10 pt-20 sm:pt-25">
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center">
             {/* LEFT - Content */}
-            <div className="flex flex-col justify-center order-2 lg:order-1">
-              <p className="sans-font uppercase whitespace-nowrap tracking-[0.9px] md:tracking-[4px] text-[8px] sm:text-[10px] md:text-xs font-semibold text-slate-700 mb-2 md:mb-4">
+            <div className="flex flex-col justify-center order-2 lg:order-1 text-center sm:text-left">
+              <p className="sans-font uppercase whitespace-nowrap tracking-[0.9px] md:tracking-[4px] text-[8px] sm:text-[10px] md:text-xs font-semibold text-slate-700 mb-2 md:mb-4 mx-auto sm:mx-0">
                 Expert Care. Advanced Technology. Natural Results.
               </p>
 
@@ -88,7 +88,7 @@ text-[clamp(38px,5vw,62px)]
 leading-[1.04]
 tracking-[-0.015em]
 text-[#1A1A1A]
-mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1] sm:leading-[1.05] md:leading-[0.95] font-medium text-[#111] tracking-tight"
+mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1] sm:leading-[1.05] md:leading-[0.95] font-medium text-[#111] tracking-tight mx-auto sm:mx-0"
               >
                 Expert{" "}
                 <span
@@ -132,13 +132,13 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                 <span className="inline-block">Science</span>
               </h1>
 
-              <div className="sans-font mt-1 sm:mt-2 md:mt-5 space-y-0.5 md:space-y-1 text-[11px] sm:text-[13px] md:text-[17px] text-slate-600">
+              <div className="sans-font mt-1 sm:mt-2 md:mt-5 space-y-0.5 md:space-y-1 text-[11px] sm:text-[13px] md:text-[17px] text-slate-600 mx-auto sm:mx-0">
                 <p>Acne • Pigmentation • Hair Fall • Hair Transplants</p>
                 <p>Anti-Aging • Laser Treatments & more</p>
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 md:gap-3 mt-3 sm:mt-4 md:mt-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 md:gap-3 mt-3 sm:mt-4 md:mt-6 mx-auto sm:mx-0 w-full">
                 {stats.map((item, index) => (
                   <div
                     key={index}
@@ -181,13 +181,13 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
               </div>
 
               {/* Buttons */}
-              <div className="sans-font flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-3 mt-3 sm:mt-4 md:mt-6">
+              <div className="sans-font flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-3 mt-3 sm:mt-4 md:mt-6 mx-auto sm:mx-0 w-full sm:w-auto">
                 {/* Book Appointment Button */}
                 <a
                   href="https://www.aakrithiskinandhairclinic.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105"
+                  className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   <Calendar size={14} className="sm:w-4 sm:h-4" />
                   Book Appointment
@@ -198,7 +198,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-[#154f85] text-[#154f85] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#154f85] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105"
+                  className="border-2 border-[#154f85] text-[#154f85] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#154f85] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105 w-full sm:w-auto"
                 >
                   <MessageCircle
                     size={14}
@@ -365,6 +365,11 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
 
           /* Disable all animations and transitions on mobile (320px) */
           @media (max-width: 480px) {
+            /* Center all text on mobile */
+            .text-center\\/sm\\:text-left {
+              text-align: center !important;
+            }
+            
             /* Disable float animations */
             [style*="animation: float"],
             [style*="animation: float-slow"],
@@ -454,6 +459,11 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
             /* Move Hair Transplant badge up on mobile */
             .mobile-specialist-badge {
               bottom: 60px !important;
+            }
+
+            /* Make buttons full width on mobile */
+            .w-full\\/sm\\:w-auto {
+              width: 100% !important;
             }
           }
         `}</style>
