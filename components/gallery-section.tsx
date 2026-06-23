@@ -455,7 +455,7 @@ export default function GallerySection() {
                         }}
                       >
                         <Image
-                          src={result.afterImage}
+                          src={result.beforeImage}
                           alt={`${result.title} - After`}
                           fill
                           className="object-cover"
@@ -463,11 +463,11 @@ export default function GallerySection() {
                       </motion.div>
                       
                       {/* BEFORE Label */}
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                         <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-red-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full backdrop-blur-sm">
                           BEFORE
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#d4c5b8] to-[#c4b5a8]">
@@ -544,7 +544,7 @@ export default function GallerySection() {
                         }}
                       >
                         <Image
-                          src={result.beforeImage}
+                          src={result.afterImage}
                           alt={`${result.title} - Before`}
                           fill
                           className="object-cover"
@@ -552,11 +552,11 @@ export default function GallerySection() {
                       </motion.div>
                       
                       {/* AFTER Label */}
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                      {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                         <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-green-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full backdrop-blur-sm">
                           AFTER
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#a8cce7] to-[#88b4d4]">
