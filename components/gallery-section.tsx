@@ -38,7 +38,7 @@ export default function GallerySection() {
   const results = [
     {
       id: 1,
-      title: "Hair Transplant — FUE",
+      title: "Hairline Restoration",
       beforeImage: Hair_Transplant_FUE_before,
       afterImage: Hair_Transplant_FUE_after,
       beforeColor: "from-[#d4c5b8] to-[#c4b5a8]",
@@ -47,7 +47,7 @@ export default function GallerySection() {
     },
     {
       id: 2,
-      title: "Acne Scar Revision",
+      title: "Acne Marks Treatment",
       beforeImage: Acne_Scar_Revision_CO2_MNRF_before,
       afterImage: Acne_Scar_Revision_CO2_MNRF_after,
       beforeColor: "from-[#d4b8a8] to-[#c4a898]",
@@ -56,7 +56,7 @@ export default function GallerySection() {
     },
     {
       id: 3,
-      title: "Pigmentation Treatment",
+      title: "Acne Scar Revision",
       beforeImage: Pigmentation_Treatment_before,
       afterImage: Pigmentation_Treatment_after,
       beforeColor: "from-[#d4c0a8] to-[#c4b098]",
@@ -65,7 +65,7 @@ export default function GallerySection() {
     },
     {
       id: 4,
-      title: "Hair Regrowth — GFC + PRP",
+      title: "Hair Regrowth",
       beforeImage: Hair_Regrowth_GFC_PRP_before,
       afterImage: Hair_Regrowth_GFC_PRP_after,
       beforeColor: "from-[#c4b8a8] to-[#b4a898]",
@@ -74,7 +74,7 @@ export default function GallerySection() {
     },
     {
       id: 5,
-      title: "Anti-Aging — HIFU",
+      title: "Acne Scar Treatment",
       beforeImage: Acne_Scar_Revision_Case_2_before,
       afterImage: Acne_Scar_Revision_Case_2_after,
       beforeColor: "from-[#d4c8b8] to-[#c4b8a8]",
@@ -83,7 +83,7 @@ export default function GallerySection() {
     },
     {
       id: 6,
-      title: "Laser Tattoo Removal",
+      title: "Crown Hair Restoration",
       beforeImage: Hair_Regrowth_GFC_PRP_Case_3_before,
       afterImage: Hair_Regrowth_GFC_PRP_Case_3_after,
       beforeColor: "from-[#c4b0a8] to-[#b4a098]",
