@@ -185,7 +185,7 @@ export default function AboutSection() {
                 tracking-[6px]
                 text-xs
                 font-semibold
-                text-[#154f85]
+                text-[#BC5841]
                 mb-4
               "
               variants={textVariants}
@@ -195,7 +195,7 @@ export default function AboutSection() {
 
             {/* Heading */}
             <motion.h2
-              className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] mb-3"
+              className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] mb-3"
               variants={titleVariants}
             >
               The Pinnacle of Holistic Care, Where Beauty Finds Its Perfect Form
@@ -241,7 +241,7 @@ export default function AboutSection() {
                       w-5
                       h-5
                       rounded-full
-                      bg-[#154f85]/10
+                      bg-[#BC5841]/10
                       flex
                       items-center
                       justify-center
@@ -249,7 +249,7 @@ export default function AboutSection() {
                       mt-0.5
                     "
                   >
-                    <feature.icon className="w-3 h-3 text-[#154f85]" />
+                    <feature.icon className="w-3 h-3 text-[#BC5841]" />
                   </span>
                   {feature.text}
                 </motion.li>
@@ -278,14 +278,14 @@ export default function AboutSection() {
                 w-fit
                 group
                 shadow-lg
-                shadow-[#154f85]/30
+                shadow-[#BC5841]/30
                 hover:shadow-xl
-                hover:shadow-[#154f85]/50
+                hover:shadow-[#BC5841]/50
               "
               variants={buttonVariants}
             >
               {/* Gradient Background with Right-to-Left Transition */}
-              <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
 
               {/* Gradient Shimmer Effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>

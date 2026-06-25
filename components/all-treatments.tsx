@@ -269,7 +269,7 @@ export default function AllTreatments() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
+            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -287,7 +287,7 @@ export default function AllTreatments() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
 
           {/* Optional subtitle with animation */}
@@ -323,8 +323,8 @@ export default function AllTreatments() {
                 flex-shrink-0
                 ${
                   activeTab === category
-                    ? "bg-[#154f85] text-white shadow-lg shadow-[#154f85]/20"
-                    : "bg-white text-[#2d2d2d] hover:bg-[#eef3f8] border border-[#e8e3de]"
+                    ? "bg-[#BC5841] text-white shadow-lg shadow-[#BC5841]/20"
+                    : "bg-white text-[#D97A63] hover:bg-[#eef3f8] border border-[#e8e3de]"
                 }
               `}
             >
@@ -371,8 +371,8 @@ export default function AllTreatments() {
                   right-0
                   h-0
                   bg-gradient-to-t
-                  from-[#154f85]
-                  via-[#3a7db5]
+                  from-[#BC5841]
+                  via-[#D97A63]
                   to-transparent
                   group-hover:h-full
                   transition-all
@@ -391,8 +391,8 @@ export default function AllTreatments() {
                   right-0
                   h-0
                   bg-gradient-to-t
-                  from-[#0d2b4a]
-                  via-[#154f85]/50
+                  from-[#BC5841]
+                  via-[#D97A63]/50
                   to-transparent
                   group-hover:h-2/3
                   transition-all
@@ -433,14 +433,14 @@ export default function AllTreatments() {
                           duration-300
                           shadow-md
                           group-hover:shadow-lg
-                          group-hover:shadow-[#154f85]/30
+                          group-hover:shadow-[#BC5841]/30
                         "
                       >
                         <treatment.icon
                           className="
                             w-4 sm:w-4.5 md:w-5
                             h-4 sm:h-4.5 md:h-5
-                            text-[#154f85]
+                            text-[#BC5841]
                             transition-colors
                             duration-300
                           "
@@ -456,12 +456,12 @@ export default function AllTreatments() {
                           w-full
                           h-full
                           rounded-full
-                          bg-[#154f85]
+                          bg-[#BC5841]
                           flex
                           items-center
                           justify-center
                           shadow-lg
-                          shadow-[#154f85]/30
+                          shadow-[#BC5841]/30
                         "
                       >
                         <treatment.icon
@@ -538,7 +538,7 @@ export default function AllTreatments() {
                     sans-font
                     text-[10px] sm:text-xs
                     font-medium
-                    text-[#154f85]
+                    text-[#BC5841]
                     bg-[#eef3f8]
                     px-2.5 sm:px-3
                     py-0.5 sm:py-1

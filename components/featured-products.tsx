@@ -187,19 +187,19 @@ export default function FeaturedProducts() {
           variants={titleVariants}
         >
           <motion.div
-            className="flex-1 h-[2px] bg-[#154f85]/20 hidden md:block"
+            className="flex-1 h-[2px] bg-[#BC5841]/20 hidden md:block"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
           <motion.h2
-            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-[#1a1a1a] text-center"
+            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium text-[#1a1a1a] text-center"
             variants={titleVariants}
           >
             Why Patients Choose Aakrithi
           </motion.h2>
           <motion.div
-            className="flex-1 h-[2px] bg-[#154f85]/20 hidden md:block"
+            className="flex-1 h-[2px] bg-[#BC5841]/20 hidden md:block"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -241,9 +241,9 @@ export default function FeaturedProducts() {
                   right-0
                   h-0
                   bg-gradient-to-t
-                  from-[#0d2b4a]
-                  via-[#154f85]
-                  via-[#3a7db5]
+                  from-[#BC5841]
+                  via-[#BC5841]
+                  via-[#D97A63]
                   to-transparent
                   md:group-hover:h-full
                   transition-none md:transition-all
@@ -262,8 +262,8 @@ export default function FeaturedProducts() {
                   right-0
                   h-0
                   bg-gradient-to-t
-                  from-[#0a1f35]
-                  via-[#154f85]/80
+                  from-[#BC5841]
+                  via-[#D97A63]/80
                   to-transparent
                   md:group-hover:h-2/3
                   transition-none md:transition-all
@@ -310,14 +310,14 @@ export default function FeaturedProducts() {
                           delay-100
                           shadow-md
                           md:group-hover:shadow-lg
-                          md:group-hover:shadow-[#154f85]/30
+                          md:group-hover:shadow-[#BC5841]/30
                         "
                       >
                         <item.icon
                           className="
                             w-4 sm:w-5 md:w-6
                             h-4 sm:h-5 md:h-6
-                            text-[#154f85]
+                            text-[#BC5841]
                             transition-none md:transition-colors
                             duration-500
                             delay-100
@@ -334,12 +334,12 @@ export default function FeaturedProducts() {
                           w-full
                           h-full
                           rounded-full
-                          bg-[#154f85]
+                          bg-[#BC5841]
                           flex
                           items-center
                           justify-center
                           shadow-lg
-                          shadow-[#154f85]/30
+                          shadow-[#BC5841]/30
                         "
                       >
                         <item.icon

@@ -70,7 +70,7 @@ export default function Header() {
         }
 
         .nav-links a:hover {
-          color: #154f85;
+          color: #BC5841;
         }
 
         .nav-links a::after {
@@ -80,7 +80,7 @@ export default function Header() {
           left: 0;
           width: 0;
           height: 2.5px;
-          background: #154f85;
+          background: #D97A63;
           transition: width 0.3s ease;
           border-radius: 2px;
         }
@@ -144,7 +144,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="header-font px-3 py-2 text-sm font-medium text-slate-700 hover:text-[#154f85] transition-colors duration-200 rounded-lg hover:bg-[#FAF5EE]"
+                className="header-font px-3 py-2 text-sm font-medium text-slate-700 hover:text-[#BC5841] transition-colors duration-200 rounded-lg hover:bg-[#FAF5EE]"
               >
                 {item.name}
               </a>
@@ -157,7 +157,7 @@ export default function Header() {
               href="https://www.aakrithiskinandhairclinic.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105"
+              className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-[#BC5841]/30 transition-all duration-300 hover:scale-105"
             >
               <Calendar size={16} />
               Book Appointment
@@ -167,7 +167,7 @@ export default function Header() {
           {/* Mobile Menu Button - Fixed visibility */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-1.5 rounded-xl bg-[#154f85] text-white hover:bg-[#1a5f9a] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
+            className="lg:hidden p-1.5 rounded-xl bg-[#BC5841] text-white hover:bg-[#BC5841] transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -186,7 +186,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="header-font px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-[#154f85] hover:bg-[#FAF5EE] rounded-lg transition-colors"
+                className="header-font px-4 py-2.5 text-sm font-medium text-slate-700 hover:text-[#BC5841] hover:bg-[#FAF5EE] rounded-lg transition-colors"
               >
                 {item.name}
               </a>
@@ -194,14 +194,14 @@ export default function Header() {
             <div className="pt-4 px-4 space-y-3">
               <a
                 href="tel:+919505738393"
-                className="header-font flex items-center gap-2 text-sm font-semibold text-[#154f85]"
+                className="header-font flex items-center gap-2 text-sm font-semibold text-[#BC5841]"
               >
                 <Phone size={16} />
                 +91 95057 38393
               </a>
               <a
                 href="https://www.aakrithiskinandhairclinic.com/"
-                className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
+                className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
               >
                 <Calendar size={16} />
                 Book Appointment

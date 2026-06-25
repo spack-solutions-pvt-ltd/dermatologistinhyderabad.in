@@ -72,7 +72,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="flex items-center bg-[#FBECE3] overflow-hidden py-4 md:py-6">
+      <section className="flex items-center bg-[#FBF4EC] overflow-hidden py-4 md:py-6">
         <div className="max-w-7xl mx-auto w-full px-3 sm:px-4 lg:px-10 pt-20 sm:pt-25">
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center">
             {/* LEFT - Content */}
@@ -83,16 +83,20 @@ export default function Hero() {
 
               <h1
                 className="playfair-heading font-serif
-font-semibold
-text-[clamp(38px,5vw,62px)]
-leading-[1.04]
-tracking-[-0.015em]
-text-[#1A1A1A]
-mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1] sm:leading-[1.05] md:leading-[0.95] font-medium text-[#111] tracking-tight mx-auto sm:mx-0"
+  text-[clamp(38px,5vw,62px)]
+  leading-[1.04]
+  tracking-[-0.015em]
+  text-[#1A1A1A]
+  mb-[22px]
+  text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px]
+  leading-[1.1] sm:leading-[1.05] md:leading-[0.95]
+  font-light
+  tracking-tight
+  mx-auto sm:mx-0"
               >
                 Expert{" "}
                 <span
-                  className="text-[#5a98c7] inline-block"
+                  className="text-[#BC5841] inline-block"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
@@ -114,7 +118,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                                 }deg) scale(${1 + Math.random() * 0.15})`
                               : "translateY(0px) rotate(0deg) scale(1)",
                             transitionDelay: `${index * 30}ms`,
-                            color: isHovered ? "#154f85" : "#5a98c7",
+                            color: isHovered ? "#BC5841" : "#D97A63",
                             marginRight: isSpace ? "0.15em" : "0",
                           } as CSSProperties
                         }
@@ -156,13 +160,13 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                         {/* Front */}
                         <div className="absolute inset-0 [backface-visibility:hidden]">
                           <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-md">
-                            <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-[#1f4f82]" />
+                            <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-[#BC5841]" />
                           </div>
                         </div>
 
                         {/* Back */}
                         <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                          <div className="w-full h-full bg-[#1f4f82] rounded-full flex items-center justify-center shadow-md">
+                          <div className="w-full h-full bg-[#BC5841] rounded-full flex items-center justify-center shadow-md">
                             <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-white" />
                           </div>
                         </div>
@@ -187,7 +191,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                   href="https://www.aakrithiskinandhairclinic.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-text bg-gradient-to-r from-[#154f85] to-[#5a98c7] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   <Calendar size={14} className="sm:w-4 sm:h-4" />
                   Book Appointment
@@ -198,7 +202,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-[#154f85] text-[#154f85] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#154f85] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105 w-full sm:w-auto"
+                  className="border-2 border-[#D97A63] text-[#D97A63] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#BC5841] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105 w-full sm:w-auto"
                 >
                   <MessageCircle
                     size={14}
@@ -272,7 +276,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                       Patient Rating
                     </span>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-red-400 rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-[4px] sm:text-[5px] md:text-[10px] font-bold">
                       ✓
                     </span>
@@ -290,11 +294,11 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                   }
                 >
                   <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
-                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#154f85]/10 flex items-center justify-center">
-                      <Shield className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#154f85]" />
+                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#D97A63]/10 flex items-center justify-center">
+                      <Shield className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#D97A63]" />
                     </div>
                     <div>
-                      <div className="sans-font font-bold text-sm sm:text-lg md:text-2xl text-[#154f85]">
+                      <div className="sans-font font-bold text-sm sm:text-lg md:text-2xl text-[#D97A63]">
                         MD
                       </div>
                       <div className="sans-font text-[6px] sm:text-[7px] md:text-xs text-slate-600 font-medium">
@@ -302,7 +306,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -bottom-1 -left-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#154f85] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -bottom-1 -left-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#D97A63] rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-[4px] sm:text-[5px] md:text-[10px] font-bold">
                       ★
                     </span>
@@ -320,8 +324,8 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                   }
                 >
                   <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
-                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#5a98c7]/10 flex items-center justify-center">
-                      <Sparkles className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#5a98c7]" />
+                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#D97A63]/10 flex items-center justify-center">
+                      <Sparkles className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#D97A63]" />
                     </div>
                     <div>
                       <div className="sans-font font-bold text-[8px] sm:text-[10px] md:text-lg text-[#111]">
@@ -332,7 +336,7 @@ mb-[22px] text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px] leading-[1.1]
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#5a98c7] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#D97A63] rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-[4px] sm:text-[5px] md:text-[10px] font-bold">
                       ✦
                     </span>

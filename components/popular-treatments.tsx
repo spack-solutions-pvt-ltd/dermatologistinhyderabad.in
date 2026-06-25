@@ -301,10 +301,10 @@ export default function PopularTreatments() {
           .group-hover\\:sm\\:shadow-2xl {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
-          .group-hover\\:sm\\:shadow-\\[\\#154f85\\]\\/10 {
+          .group-hover\\:sm\\:shadow-\\[\\#BC5841\\]\\/10 {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
-          .group-hover\\:sm\\:text-\\[\\#154f85\\] {
+          .group-hover\\:sm\\:text-\\[\\#BC5841\\] {
             color: inherit !important;
           }
           .sm\\:hover\\:scale-105 {
@@ -313,7 +313,7 @@ export default function PopularTreatments() {
           .group-hover\\:sm\\:shadow-lg {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
-          .group-hover\\:sm\\:shadow-\\[\\#154f85\\]\\/30 {
+          .group-hover\\:sm\\:shadow-\\[\\#BC5841\\]\\/30 {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
           .group-hover\\:scale-110 {
@@ -337,7 +337,7 @@ export default function PopularTreatments() {
           .transition-all, .transition-transform, .transition-opacity {
             transition: none !important;
           }
-          .hover\\:shadow-\\[\\#154f85\\]\\/30 {
+          .hover\\:shadow-\\[\\#BC5841\\]\\/30 {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
           .hover\\:scale-105 {
@@ -347,12 +347,12 @@ export default function PopularTreatments() {
       `}</style>
 
       <div className="relative">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#154f85]/3 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#5a98c7]/3 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#a8cce7]/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC5841]/3 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D97A63]/3 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#FBF4EC]/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #154f85 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, #BC5841 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
           }}>
         </div>
@@ -366,7 +366,7 @@ export default function PopularTreatments() {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.h2
-            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
+            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -383,7 +383,7 @@ export default function PopularTreatments() {
 
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-gradient-to-r from-[#154f85] via-[#5a98c7] to-[#154f85] rounded-full mx-auto mt-3"
+            className="h-1 bg-gradient-to-r from-[#BC5841] via-[#D97A63] to-[#BC5841] rounded-full mx-auto mt-3"
             style={{ width: "200px" }}
           />
 
@@ -418,8 +418,8 @@ export default function PopularTreatments() {
                 flex-shrink-0
               `}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#154f85]/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#154f85] via-[#5a98c7] to-[#154f85] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#BC5841]/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BC5841] via-[#D97A63] to-[#BC5841] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="p-2 sm:p-3 pb-0">
                 <motion.div 
@@ -481,7 +481,7 @@ export default function PopularTreatments() {
                     overflow-hidden
                   "
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7]"></span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63]"></span>
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full hidden sm:block"></span>
                   <Calendar size={14} className="relative z-10 sm:w-[16px] sm:h-[16px]" />
                   <span className="relative z-10">Book Now</span>
