@@ -413,7 +413,7 @@ export default function ClinicGallery() {
             "
           >
             {/* Gradient Background with Right-to-Left Transition */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
 
             {/* Gradient Shimmer Effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
