@@ -176,7 +176,7 @@ export default function ContactSection() {
           animate={isInView ? "visible" : "hidden"}
         >
           <motion.h2
-            className="playfair-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
+            className="playfair-heading text-3xl sm:text-4xl md:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -193,7 +193,7 @@ export default function ContactSection() {
 
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -218,7 +218,7 @@ export default function ContactSection() {
 
                 {/* Address */}
                 <div className="flex gap-3 mb-3">
-                  <MapPin className="w-5 h-5 text-[#154f85] flex-shrink-0 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-[#BC5841] flex-shrink-0 mt-0.5" />
                   <p className="sans-font text-[#4a5a6a] text-sm leading-relaxed">
                     {location.address}
                   </p>
@@ -226,10 +226,10 @@ export default function ContactSection() {
 
                 {/* Phone */}
                 <div className="flex gap-3 mb-2">
-                  <Phone className="w-5 h-5 text-[#154f85] flex-shrink-0" />
+                  <Phone className="w-5 h-5 text-[#BC5841] flex-shrink-0" />
                   <a
                     href={location.phoneLink}
-                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#154f85] transition-colors"
+                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#BC5841] transition-colors"
                   >
                     {location.phone}
                   </a>
@@ -237,10 +237,10 @@ export default function ContactSection() {
 
                 {/* Email */}
                 <div className="flex gap-3 mb-4">
-                  <Mail className="w-5 h-5 text-[#154f85] flex-shrink-0" />
+                  <Mail className="w-5 h-5 text-[#BC5841] flex-shrink-0" />
                   <a
                     href={location.emailLink}
-                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#154f85] transition-colors break-all"
+                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#BC5841] transition-colors break-all"
                   >
                     {location.email}
                   </a>
@@ -249,7 +249,7 @@ export default function ContactSection() {
                 {/* Meta Info */}
                 <div className="sans-font flex flex-wrap gap-4 pt-4 border-t border-[#e8e3de] text-xs text-[#5a6879]">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#154f85]" />
+                    <Clock className="w-4 h-4 text-[#BC5841]" />
                     <b>Hours:</b> {location.hours}
                   </span>
                   {location.sunday && (
@@ -292,7 +292,7 @@ export default function ContactSection() {
                     rounded-xl
                     text-xs
                     font-semibold
-                    text-[#154f85]
+                    text-[#BC5841]
                     shadow-lg
                     hover:bg-white
                     hover:scale-105
@@ -330,14 +330,14 @@ export default function ContactSection() {
               items-center
               gap-2
               bg-gradient-to-r
-              from-[#154f85]
-              to-[#5a98c7]
+              from-[#BC5841]
+              to-[#D97A63]
               text-white
               px-8
               py-4
               rounded-2xl
               hover:shadow-lg
-              hover:shadow-[#154f85]/30
+              hover:shadow-[#BC5841]/30
               hover:scale-105
               transition-all
               duration-300

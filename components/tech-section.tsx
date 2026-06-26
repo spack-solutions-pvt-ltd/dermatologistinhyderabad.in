@@ -268,7 +268,7 @@ export default function TechSection() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-           className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
+           className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -286,7 +286,7 @@ export default function TechSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -320,14 +320,14 @@ export default function TechSection() {
                 rounded-2xl
                 p-6
                 text-center
-                hover:bg-[#154f85]
+                hover:bg-[#BC5841]
                 transition-all
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-xl
                 border
                 border-[#e8e3de]
-                hover:border-[#154f85]
+                hover:border-[#BC5841]
                
               "
             >
@@ -355,7 +355,7 @@ export default function TechSection() {
                   className="
                     w-6
                     h-6
-                    text-[#154f85]
+                    text-[#BC5841]
                     group-hover:text-white
                     transition-colors
                     duration-300

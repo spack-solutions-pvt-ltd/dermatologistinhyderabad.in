@@ -157,7 +157,7 @@ export default function FAQSection() {
   const words = headingText.split(" ");
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#FAF5EE]">
+    <section ref={sectionRef} className="py-20 bg-[#FBF4EC]">
 
     <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -181,7 +181,7 @@ export default function FAQSection() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
+            className="text-3xl sm:text-4xl md:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -199,7 +199,7 @@ export default function FAQSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -264,7 +264,7 @@ export default function FAQSection() {
                       justify-center
                       transition-all
                       duration-300
-                      group-open:bg-[#154f85]
+                      group-open:bg-[#BC5841]
                       group-open:text-white
                     "
                   >

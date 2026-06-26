@@ -52,7 +52,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0d1b2a] text-white/70">
+    <footer className="bg-[#BC5841] text-white/70">
       {/* Font styles */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -127,7 +127,7 @@ export default function Footer() {
                     flex
                     items-center
                     justify-center
-                    hover:bg-[#154f85]
+                    hover:bg-[#BC5841]
                     hover:scale-110
                     transition-all
                     duration-300

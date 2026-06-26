@@ -302,7 +302,7 @@ export default function GallerySection() {
   const words = headingText.split(" ");
 
   return (
-    <section id="before-after" ref={sectionRef} className="py-12 sm:py-16 md:py-20 bg-[#FAF5EE]">
+    <section id="before-after" ref={sectionRef} className="py-12 sm:py-16 md:py-20 bg-[#FBF4EC]">
 
     <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -326,7 +326,7 @@ export default function GallerySection() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
+            className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2 mb-3"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -344,7 +344,7 @@ export default function GallerySection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -576,7 +576,7 @@ export default function GallerySection() {
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                   variants={vsVariants}
                 >
-                  <div className="bg-[#154f85] text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 rounded-full shadow-lg border-2 border-white">
+                  <div className="bg-[#BC5841] text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 rounded-full shadow-lg border-2 border-white">
                     VS
                   </div>
                 </motion.div>
@@ -587,7 +587,7 @@ export default function GallerySection() {
                 className="p-3 sm:p-4 text-center border-t border-[#e8e3de]"
                 variants={captionVariants}
               >
-                <p className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#154f85] transition-colors duration-300">
+                <p className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#BC5841] transition-colors duration-300">
                   {result.title}
                 </p>
               </motion.div>

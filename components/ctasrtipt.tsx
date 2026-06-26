@@ -2,7 +2,7 @@ import { Calendar, Phone } from "lucide-react";
 
 export default function CTAStrip() {
   return (
-    <section className="py-16 md:py-20 bg-[#154f85]">
+    <section className="py-16 md:py-20 bg-[#D97A63]">
       {/* Font styles */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -25,7 +25,7 @@ export default function CTAStrip() {
 
       <div className="max-w-4xl mx-auto w-full px-6 lg:px-10 text-center">
         {/* Heading */}
-        <h3 className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-3">
+        <h3 className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium text-white mb-3">
           Your skin and hair deserve a science-backed plan.
         </h3>
 
@@ -47,7 +47,7 @@ export default function CTAStrip() {
               items-center
               gap-2
               bg-white
-              text-[#154f85]
+              text-[#BC5841]
               px-6
               md:px-8
               py-3
@@ -81,7 +81,7 @@ export default function CTAStrip() {
               md:py-4
               rounded-2xl
               hover:bg-white
-              hover:text-[#154f85]
+              hover:text-[#BC5841]
               transition-all
               duration-300
               hover:scale-105

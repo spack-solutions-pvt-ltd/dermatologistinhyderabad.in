@@ -262,7 +262,7 @@ export default function TestimonialsSection() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -280,7 +280,7 @@ export default function TestimonialsSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -334,7 +334,7 @@ export default function TestimonialsSection() {
                     w-8 sm:w-9 md:w-10
                     h-8 sm:h-9 md:h-10
                     rounded-full
-                    bg-[#154f85]
+                    bg-[#BC5841]
                     text-white
                     flex
                     items-center
@@ -386,15 +386,15 @@ export default function TestimonialsSection() {
               text-white
               overflow-hidden
               group
-              shadow-lg shadow-[#154f85]/30
-              hover:shadow-xl hover:shadow-[#154f85]/50
+              shadow-lg shadow-[#BC5841]/30
+              hover:shadow-xl hover:shadow-[#BC5841]/50
               transition-all
               duration-300
               hover:scale-105
             "
           >
             {/* Gradient Background with Right-to-Left Transition */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
 
             {/* Gradient Shimmer Effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>

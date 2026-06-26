@@ -274,7 +274,7 @@ export default function ClinicGallery() {
         >
           {/* Word-by-word animation */}
           <motion.h2
-            className="playfair-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
+            className="playfair-heading text-3xl sm:text-4xl md:text-5xl font-medium text-[#111] flex flex-wrap justify-center gap-x-3 gap-y-2"
             variants={titleVariants}
           >
             {words.map((word, index) => (
@@ -292,7 +292,7 @@ export default function ClinicGallery() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#154f85] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -407,13 +407,13 @@ export default function ClinicGallery() {
               hover:scale-105
               group
               shadow-lg
-              shadow-[#154f85]/30
+              shadow-[#BC5841]/30
               hover:shadow-xl
-              hover:shadow-[#154f85]/50
+              hover:shadow-[#BC5841]/50
             "
           >
             {/* Gradient Background with Right-to-Left Transition */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#154f85] to-[#5a98c7] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#5a98c7] group-hover:to-[#154f85]"></span>
 
             {/* Gradient Shimmer Effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
