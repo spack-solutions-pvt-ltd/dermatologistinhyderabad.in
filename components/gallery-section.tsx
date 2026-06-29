@@ -38,7 +38,8 @@ export default function GallerySection() {
   const results = [
     {
       id: 1,
-      title: "Hairline Restoration",
+      title: "Hairline Restoration Treatment",
+      subtitle: "(PRP + GFC)",
       beforeImage: Hair_Transplant_FUE_before,
       afterImage: Hair_Transplant_FUE_after,
       beforeColor: "from-[#d4c5b8] to-[#c4b5a8]",
@@ -48,6 +49,7 @@ export default function GallerySection() {
     {
       id: 2,
       title: "Acne Marks Treatment",
+      subtitle: "(CO2 Fractional Laser + PDRN)",
       beforeImage: Acne_Scar_Revision_CO2_MNRF_before,
       afterImage: Acne_Scar_Revision_CO2_MNRF_after,
       beforeColor: "from-[#d4b8a8] to-[#c4a898]",
@@ -56,7 +58,8 @@ export default function GallerySection() {
     },
     {
       id: 3,
-      title: "Acne Scar Revision",
+      title: "Acne Scar Revision Treatment",
+      subtitle: "(MNRF + Subcision + Exosomes)",
       beforeImage: Pigmentation_Treatment_before,
       afterImage: Pigmentation_Treatment_after,
       beforeColor: "from-[#d4c0a8] to-[#c4b098]",
@@ -65,7 +68,8 @@ export default function GallerySection() {
     },
     {
       id: 4,
-      title: "Hair Regrowth",
+      title: "Hair Regrowth Treatment",
+      subtitle: "(PRP + GFC)",
       beforeImage: Hair_Regrowth_GFC_PRP_before,
       afterImage: Hair_Regrowth_GFC_PRP_after,
       beforeColor: "from-[#c4b8a8] to-[#b4a898]",
@@ -75,6 +79,7 @@ export default function GallerySection() {
     {
       id: 5,
       title: "Acne Scar Treatment",
+      subtitle: "(TCA CROSS + CO2 Fractional Laser)",
       beforeImage: Acne_Scar_Revision_Case_2_before,
       afterImage: Acne_Scar_Revision_Case_2_after,
       beforeColor: "from-[#d4c8b8] to-[#c4b8a8]",
@@ -83,14 +88,14 @@ export default function GallerySection() {
     },
     {
       id: 6,
-      title: "Crown Hair Restoration",
+      title: "Crown Hair Restoration Treatment",
+      subtitle: "(PRP + GFC)",
       beforeImage: Hair_Regrowth_GFC_PRP_Case_3_before,
       afterImage: Hair_Regrowth_GFC_PRP_Case_3_after,
       beforeColor: "from-[#c4b0a8] to-[#b4a098]",
       afterColor: "from-[#d4c4a8] to-[#c4b498]",
       hasImages: true,
     },
-    
   ];
 
   // Animation variants
@@ -582,14 +587,18 @@ export default function GallerySection() {
                 </motion.div>
               </div>
 
-              {/* Caption - Responsive */}
+              {/* Caption - Responsive - Updated with two-line title */}
               <motion.div
                 className="p-3 sm:p-4 text-center border-t border-[#e8e3de]"
                 variants={captionVariants}
               >
-                <p className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#BC5841] transition-colors duration-300">
+                <div className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#BC5841] transition-colors duration-300 leading-tight">
                   {result.title}
-                </p>
+                  <br />
+                  <span className="font-medium text-[#5a6879] group-hover:text-[#BC5841] transition-colors duration-300">
+                    {result.subtitle}
+                  </span>
+                </div>
               </motion.div>
             </motion.div>
           ))}
