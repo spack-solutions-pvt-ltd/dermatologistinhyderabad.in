@@ -52,19 +52,12 @@ export default function Hero() {
 
   return (
     <>
-      {/* Font style for Playfair Display */}
+      {/* Font style for Cormorant Garamond */}
       <style>{`
-        @font-face {
-          font-family: 'Playfair Display';
-          font-style: normal;
-          font-weight: 500;
-          font-display: swap;
-          src: url(https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgFE_.woff2) format('woff2');
-          unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
         
-        .playfair-heading {
-          font-family: 'Playfair Display', serif;
+        .cormorant-heading {
+          font-family: 'Cormorant Garamond', serif;
         }
 
         .sans-font {
@@ -82,21 +75,21 @@ export default function Hero() {
               </p>
 
               <h1
-                className="playfair-heading font-serif
-  text-[clamp(38px,5vw,62px)]
-  leading-[1.04]
-  tracking-[-0.015em]
-  text-[#1A1A1A]
-  mb-[22px]
-  text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px]
-  leading-[1.1] sm:leading-[1.05] md:leading-[0.95]
-  font-light
-  tracking-tight
-  mx-auto sm:mx-0"
+                className="cormorant-heading font-serif
+text-[clamp(38px,5vw,62px)]
+leading-[1.04]
+tracking-[-0.015em]
+text-[#1A1A1A]
+mb-[22px]
+text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px]
+leading-[1.1] sm:leading-[1.05] md:leading-[0.95]
+font-medium
+tracking-tight
+mx-auto sm:mx-0"
               >
                 Expert{" "}
                 <span
-                  className="text-[#BC5841] inline-block"
+                  className="inline-block font-medium"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
@@ -120,6 +113,7 @@ export default function Hero() {
                             transitionDelay: `${index * 30}ms`,
                             color: isHovered ? "#BC5841" : "#D97A63",
                             marginRight: isSpace ? "0.15em" : "0",
+                            fontWeight: "inherit",
                           } as CSSProperties
                         }
                       >
@@ -129,11 +123,11 @@ export default function Hero() {
                   })}
                 </span>
                 <br />
-                <span className="inline-block mt-0.5 sm:mt-1 md:mt-2">
+                <span className="inline-block mt-0.5 sm:mt-1 md:mt-2 font-medium">
                   Solutions Backed by
                 </span>
                 <br />
-                <span className="inline-block">Science</span>
+                <span className="inline-block font-medium">Science</span>
               </h1>
 
               <div className="sans-font mt-1 sm:mt-2 md:mt-5 space-y-0.5 md:space-y-1 text-[11px] sm:text-[13px] md:text-[17px] text-slate-600 mx-auto sm:mx-0">
