@@ -349,7 +349,7 @@ export default function GallerySection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -360,7 +360,7 @@ export default function GallerySection() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Every result shown is from a consenting patient at Aakrithi. Outcomes
+          Every result shown is from a consenting patient at Veda. Outcomes
           vary based on skin type, condition severity and adherence to the
           treatment plan.
         </motion.p>
@@ -399,7 +399,7 @@ export default function GallerySection() {
                 <motion.div
                   className={`
                     relative overflow-hidden
-                    ${result.hasImages ? '' : `bg-gradient-to-br ${result.beforeColor}`}
+                    ${result.hasImages ? '' : `bg-linear-to-br ${result.beforeColor}`}
                   `}
                   variants={beforeVariants}
                 >
@@ -475,7 +475,7 @@ export default function GallerySection() {
                       </div> */}
                     </div>
                   ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#d4c5b8] to-[#c4b5a8]">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-br from-[#d4c5b8] to-[#c4b5a8]">
                       <div className="text-4xl sm:text-5xl md:text-6xl mb-1 sm:mb-2">😟</div>
                       <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-red-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                         BEFORE
@@ -488,7 +488,7 @@ export default function GallerySection() {
                 <motion.div
                   className={`
                     relative overflow-hidden
-                    ${result.hasImages ? '' : `bg-gradient-to-br ${result.afterColor}`}
+                    ${result.hasImages ? '' : `bg-linear-to-br ${result.afterColor}`}
                   `}
                   variants={afterVariants}
                 >
@@ -564,7 +564,7 @@ export default function GallerySection() {
                       </div> */}
                     </div>
                   ) : (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-[#a8cce7] to-[#88b4d4]">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-linear-to-br from-[#a8cce7] to-[#88b4d4]">
                       <div className="text-4xl sm:text-5xl md:text-6xl mb-1 sm:mb-2">😊</div>
                       <span className="text-[8px] sm:text-[10px] md:text-xs font-semibold text-white bg-green-500/80 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                         AFTER
@@ -574,14 +574,14 @@ export default function GallerySection() {
                 </motion.div>
 
                 {/* Divider */}
-                <div className="absolute left-1/2 top-0 bottom-0 w-[2px] sm:w-[3px] bg-white z-10 shadow-lg"></div>
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 sm:w-0.75 bg-white z-10 shadow-lg"></div>
 
                 {/* VS Badge - Responsive */}
                 <motion.div
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
                   variants={vsVariants}
                 >
-                  <div className="bg-[#BC5841] text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 rounded-full shadow-lg border-2 border-white">
+                  <div className="bg-[#E85222] text-white text-[8px] sm:text-[10px] md:text-xs font-bold px-1.5 sm:px-2 md:px-2.5 py-0.5 sm:py-1 rounded-full shadow-lg border-2 border-white">
                     VS
                   </div>
                 </motion.div>
@@ -592,10 +592,10 @@ export default function GallerySection() {
                 className="p-3 sm:p-4 text-center border-t border-[#e8e3de]"
                 variants={captionVariants}
               >
-                <div className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#BC5841] transition-colors duration-300 leading-tight">
+                <div className="sans-font text-xs sm:text-sm md:text-base font-semibold text-[#111] group-hover:text-[#E85222] transition-colors duration-300 leading-tight">
                   {result.title}
                   <br />
-                  <span className="font-medium text-[#5a6879] group-hover:text-[#BC5841] transition-colors duration-300">
+                  <span className="font-medium text-[#5a6879] group-hover:text-[#E85222] transition-colors duration-300">
                     {result.subtitle}
                   </span>
                 </div>

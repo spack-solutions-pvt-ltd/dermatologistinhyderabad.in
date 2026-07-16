@@ -10,7 +10,7 @@ export default function FAQSection() {
   const faqs = [
     {
       id: 1,
-      question: "How do I book an appointment at Aakrithi Skin & Hair Clinic?",
+      question: "How do I book an appointment at Veda Skin & Hair Clinic?",
       answer: (
         <>
           You can book directly through the form on this page, by calling{" "}
@@ -24,19 +24,19 @@ export default function FAQSection() {
       id: 2,
       question: "What are the clinic timings?",
       answer:
-        "Monday to Saturday, 10:00 AM – 9:00 PM. Sunday consultations are available by prior appointment.",
+        "Monday to Saturday, 10:00 AM – 2:00 PM and 06:00 PM - 09:00 PM. Sunday consultations are closed.",
     },
     {
       id: 3,
-      question: "Where is Aakrithi Skin & Hair Clinic located?",
+      question: "Where is Veda Skin & Hair Clinic located?",
       answer:
-        "Hyderabad branch: 3rd Floor, M.R. Supreme, Opp Gem Motors, Raghavendra Colony, Kondapur, Telangana 500084. Visakhapatnam branch: Andhra Bank Road, Pitapuram Colony, Opp CMR Central, Maddilapalem, Visakhapatnam 530017.",
+        "Sy. no. 93/B, 4th Floor, Rayudu's Tower, Kaveri Enclave, Plot no.6, above Swiss Castle, Petbasheerabad, Satyam Enclave, Kompally, Secunderabad, Telangana 500067",
     },
     {
       id: 4,
       question: "How is the first consultation structured?",
       answer:
-        "Your first visit starts with a one-to-one conversation with Dr. Swetha. She examines your concern, reviews medical history if relevant, explains the underlying cause in plain language, and walks you through the most suitable treatment options — including expected timeline, cost and aftercare. There's no pressure to commit on day one.",
+        "Your first visit starts with a one-to-one conversation with Dr. Radha. She examines your concern, reviews medical history if relevant, explains the underlying cause in plain language, and walks you through the most suitable treatment options — including expected timeline, cost and aftercare. There's no pressure to commit on day one.",
     },
     {
       id: 5,
@@ -199,7 +199,7 @@ export default function FAQSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -254,7 +254,7 @@ export default function FAQSection() {
                   <span className="flex-1">{faq.question}</span>
                   <span
                     className="
-                      flex-shrink-0
+                      shrink-0
                       w-8
                       h-8
                       rounded-full
@@ -264,7 +264,7 @@ export default function FAQSection() {
                       justify-center
                       transition-all
                       duration-300
-                      group-open:bg-[#BC5841]
+                      group-open:bg-[#E85222]
                       group-open:text-white
                     "
                   >

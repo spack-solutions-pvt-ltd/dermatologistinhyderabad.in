@@ -7,6 +7,7 @@ import { Menu, X, Phone, Calendar } from "lucide-react";
 import logo from "../asserts/logo.png";
 import logo1 from "../asserts/logo1.png";
 import logo3 from "../asserts/logo3.png";
+import logo5 from "../asserts/logo5.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function Header() {
         }
 
         .nav-links a:hover {
-          color: #BC5841;
+          color: #E85222 ;
         }
 
         .nav-links a::after {
@@ -80,7 +81,7 @@ export default function Header() {
           left: 0;
           width: 0;
           height: 2.5px;
-          background: #D97A63;
+          background: #FF7A1A;
           transition: width 0.3s ease;
           border-radius: 2px;
         }
@@ -112,25 +113,15 @@ export default function Header() {
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-[72px]">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 md:h-18">
+          {/* Logo - Increased width only */}
           <Link href="/" className="flex items-center gap-1">
-            <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
+            <div className="relative w-28 md:w-36 h-20 md:h-28 rounded-xl overflow-hidden shrink-0 p-2">
               <Image
-                src={logo}
+                src={logo5}
                 alt="Aakrithi Skin & Hair Clinic"
-                width={56}
-                height={56}
-                className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                priority
-              />
-            </div>
-            <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
-              <Image
-                src={logo1}
-                alt="Aakrithi Skin & Hair Clinic"
-                width={112}
-                height={112}
+                width={180}
+                height={140}
                 className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                 priority
               />
@@ -157,7 +148,7 @@ export default function Header() {
               href="https://www.aakrithiskinandhairclinic.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-[#BC5841]/30 transition-all duration-300 hover:scale-105"
+              className="btn-text bg-linear-to-r from-[#E85222] to-[#FF7A1A] text-white px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-[#BC5841]/30 transition-all duration-300 hover:scale-105"
             >
               <Calendar size={16} />
               Book Appointment
@@ -177,7 +168,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         <div
           className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+            isMenuOpen ? "max-h-150 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="flex flex-col py-4 space-y-1 border-t border-gray-100">
@@ -201,7 +192,7 @@ export default function Header() {
               </a>
               <a
                 href="https://www.aakrithiskinandhairclinic.com/"
-                className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
+                className="btn-text bg-linear-to-r from-[#E85222 ] to-[#FF7A1A] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
               >
                 <Calendar size={16} />
                 Book Appointment

@@ -6,6 +6,7 @@ import logo from "../asserts/logo.png";
 import logo1 from "../asserts/logo1.png";
 import logo2 from "../asserts/logo2.png";
 import logo4 from "../asserts/logo4.png";
+import logo5 from "../asserts/logo5.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -31,28 +32,28 @@ export default function Footer() {
   const socialLinks = [
     {
       name: "Instagram",
-      href: "https://www.instagram.com/dr_swetha_aakrithi/",
+      href: "https://www.instagram.com/dr.radhapenumatsa/?hl=en",
       icon: FaInstagram,
     },
     {
       name: "Facebook",
-      href: "https://www.facebook.com/AakrithiSkinHairAndAesthetics/",
+      href: "https://www.facebook.com/VedaSkinHairAesthetic",
       icon: FaFacebookF,
     },
     {
       name: "YouTube",
-      href: "https://www.youtube.com/@Aakrithiskinandhairclinics",
+      href: "https://www.youtube.com/@vedaskinandhair",
       icon: FaYoutube,
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/919505738393",
+      href: "https://wa.me/917995842127",
       icon: Phone,
     },
   ];
 
   return (
-    <footer className="bg-[#BC5841] text-white/70">
+    <footer className="bg-[#E85222] text-white/70">
       {/* Font styles */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -81,33 +82,24 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             {/* Brand Row with Logos - Adjusted */}
             <Link href="/" className="flex items-center mb-4">
-              <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden flex-shrink-0 p-1.5">
+              <div className="relative w-12 h-12 md:w-45 md:h-20 rounded-xl overflow-hidden shrink-0 p-1.5 bg-amber-50">
                 <Image
-                  src={logo2}
-                  alt="Aakrithi Skin & Hair Clinic"
-                  width={56}
+                  src={logo5}
+                  alt="Vedha Skin & Hair Clinic"
+                  width={100}
                   height={56}
                   className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
                   priority
                 />
               </div>
-              <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden flex-shrink-0 p-1.5   ">
-                <Image
-                  src={logo4}
-                  alt="Aakrithi Skin & Hair Clinic"
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                  priority
-                />
-              </div>
+            
             </Link>
 
             {/* Description */}
             <p className="sans-font text-sm leading-relaxed mb-4">
               Where beauty finds its perfect form. Expert dermatology, hair
               transplantation and aesthetic care — backed by science and led by
-              Dr. Swetha Ravi Penmetsa, MD.
+              Dr. Radha Penumatsa, MD.
             </p>
 
             {/* Social Icons */}
@@ -127,7 +119,7 @@ export default function Footer() {
                     flex
                     items-center
                     justify-center
-                    hover:bg-[#BC5841]
+                    hover:bg-[#E85222]
                     hover:scale-110
                     transition-all
                     duration-300
@@ -187,37 +179,24 @@ export default function Footer() {
             <div className="mb-3">
               <p className="sans-font text-sm">
                 <span className="text-white font-semibold">Hyderabad:</span>{" "}
-                Kondapur
+                Kompally
               </p>
               <a
                 href="tel:+919505738393"
                 className="sans-font text-sm hover:text-white transition-colors"
               >
-                +91 95057 38393
+                +91 79958 42127
               </a>
             </div>
 
-            {/* Visakhapatnam */}
-            <div className="mb-3">
-              <p className="sans-font text-sm">
-                <span className="text-white font-semibold">Visakhapatnam:</span>{" "}
-                Maddilapalem
-              </p>
-              <a
-                href="tel:+917093881288"
-                className="sans-font text-sm hover:text-white transition-colors"
-              >
-                +91 70938 81288
-              </a>
-            </div>
 
             {/* Email */}
             <div>
               <a
-                href="mailto:aakrithiskinclinic@gmail.com"
+                href="mailto:vedaskinandhairclinic@gmail.com"
                 className="sans-font text-sm hover:text-white transition-colors break-all"
               >
-                aakrithiskinclinic@gmail.com
+                 vedaskinandhairclinic@gmail.com
               </a>
             </div>
           </div>
@@ -226,7 +205,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-12 pt-6 border-t border-white/10 text-xs text-white/50 text-center md:text-left">
           <span className="sans-font">
-            © {currentYear} Aakrithi Skin & Hair Clinic · Regen Health Care
+            © {currentYear} Veda Skin & Hair Clinic · Regen Health Care
             Services · All rights reserved ·
             <a
               href="#"

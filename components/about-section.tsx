@@ -185,12 +185,12 @@ export default function AboutSection() {
                 tracking-[6px]
                 text-xs
                 font-semibold
-                text-[#BC5841]
+                text-[#E85222]
                 mb-4
               "
               variants={textVariants}
             >
-              ABOUT AAKRITHI
+              ABOUT VEDA
             </motion.p>
 
             {/* Heading */}
@@ -207,7 +207,7 @@ export default function AboutSection() {
               variants={textVariants}
             >
               <p>
-                Derived from Sanskrit, <i>Aakrithi</i> means shape, form, and the
+                Derived from Sanskrit, <i>Veda</i> means shape, form, and the
                 embodiment of beauty. We treat skin and hair as a science — not a
                 service. Every consultation begins with listening, every plan is
                 personalised, and every outcome is monitored.
@@ -241,15 +241,15 @@ export default function AboutSection() {
                       w-5
                       h-5
                       rounded-full
-                      bg-[#BC5841]/10
+                      bg-[#E85222]/10
                       flex
                       items-center
                       justify-center
-                      flex-shrink-0
+                      shrink-0
                       mt-0.5
                     "
                   >
-                    <feature.icon className="w-3 h-3 text-[#BC5841]" />
+                    <feature.icon className="w-3 h-3 text-[#E85222]" />
                   </span>
                   {feature.text}
                 </motion.li>
@@ -278,17 +278,17 @@ export default function AboutSection() {
                 w-fit
                 group
                 shadow-lg
-                shadow-[#BC5841]/30
+                shadow-[#E85222]/30
                 hover:shadow-xl
-                hover:shadow-[#BC5841]/50
+                hover:shadow-[#E85222]/50
               "
               variants={buttonVariants}
             >
               {/* Gradient Background with Right-to-Left Transition */}
-              <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-[#E85222] to-[#FF7A1A] transition-all duration-500 ease-in-out group-hover:bg-linear-to-l group-hover:from-[#FF7A1A] group-hover:to-[#E85222 ]"></span>
 
               {/* Gradient Shimmer Effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
 
               <Calendar size={18} className="relative z-10" />
               <span className="relative z-10">Book Your Consultation</span>
@@ -301,12 +301,12 @@ export default function AboutSection() {
               className="
                 relative
                 w-full
-                aspect-[4/5]
-                max-w-[500px]
+                aspect-4/5
+                max-w-125
                 mx-auto
                 rounded-[40px]
                 overflow-hidden
-                bg-gradient-to-br
+                bg-linear-to-br
                 from-[#d4c5b8]
                 to-[#b8a898]
                 shadow-lg
@@ -325,7 +325,7 @@ export default function AboutSection() {
               />
 
               {/* Overlay Gradient for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/20 to-transparent"></div>
 
               {/* Text Overlay */}
               <div className="absolute bottom-6 left-0 right-0 text-center px-4 z-10">
@@ -335,7 +335,7 @@ export default function AboutSection() {
                 <p className="sans-font text-sm text-white/90 mt-1 drop-shadow-lg">
                   State-of-the-art Facility
                 </p>
-                <div className="mt-3 w-16 h-[2px] bg-white/60 mx-auto rounded-full"></div>
+                <div className="mt-3 w-16 h-0.5 bg-white/60 mx-auto rounded-full"></div>
               </div>
             </div>
 

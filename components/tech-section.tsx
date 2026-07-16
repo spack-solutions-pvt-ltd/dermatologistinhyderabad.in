@@ -286,7 +286,7 @@ export default function TechSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -320,14 +320,14 @@ export default function TechSection() {
                 rounded-2xl
                 p-6
                 text-center
-                hover:bg-[#BC5841]
+                hover:bg-[#E85222]
                 transition-all
                 duration-300
                 hover:-translate-y-2
                 hover:shadow-xl
                 border
                 border-[#e8e3de]
-                hover:border-[#BC5841]
+                hover:border-[#E85222]
                
               "
             >
@@ -355,7 +355,7 @@ export default function TechSection() {
                   className="
                     w-6
                     h-6
-                    text-[#BC5841]
+                    text-[#E85222]
                     group-hover:text-white
                     transition-colors
                     duration-300

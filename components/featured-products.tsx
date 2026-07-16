@@ -162,7 +162,7 @@ export default function FeaturedProducts() {
   return (
     <section
       ref={sectionRef}
-      className="py-12 md:py-20 bg-[#fff] overflow-hidden"
+      className="py-12 md:py-20 bg-white overflow-hidden"
     >
       {/* Font styles */}
       <style>{`
@@ -187,7 +187,7 @@ export default function FeaturedProducts() {
           variants={titleVariants}
         >
           <motion.div
-            className="flex-1 h-[2px] bg-[#BC5841]/20 hidden md:block"
+            className="flex-1 h-0.5 bg-[#E85222]/20 hidden md:block"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -196,10 +196,10 @@ export default function FeaturedProducts() {
             className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-medium text-[#1a1a1a] text-center"
             variants={titleVariants}
           >
-            Why Patients Choose Aakrithi
+            Why Patients Choose Veda
           </motion.h2>
           <motion.div
-            className="flex-1 h-[2px] bg-[#BC5841]/20 hidden md:block"
+            className="flex-1 h-0.5 bg-[#E85222]/20 hidden md:block"
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -240,10 +240,9 @@ export default function FeaturedProducts() {
                   left-0
                   right-0
                   h-0
-                  bg-gradient-to-t
-                  from-[#BC5841]
-                  via-[#BC5841]
-                  via-[#D97A63]
+                  bg-linear-to-t
+                  from-[#E85222]
+                  via-[#FF7A1A]
                   to-transparent
                   md:group-hover:h-full
                   transition-none md:transition-all
@@ -261,9 +260,9 @@ export default function FeaturedProducts() {
                   left-0
                   right-0
                   h-0
-                  bg-gradient-to-t
-                  from-[#BC5841]
-                  via-[#D97A63]/80
+                  bg-linear-to-t
+                  from-[#E85222]
+                  via-[#FF7A1A]/80
                   to-transparent
                   md:group-hover:h-2/3
                   transition-none md:transition-all
@@ -278,7 +277,7 @@ export default function FeaturedProducts() {
               <div className="relative z-10">
                 {/* Icon Circle - Flip on desktop only */}
                 <motion.div
-                  className="[perspective:500px] w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 mx-auto"
+                  className="perspective-normal w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 mx-auto"
                   variants={iconVariants}
                 >
                   <div
@@ -288,13 +287,13 @@ export default function FeaturedProducts() {
                       h-12 sm:h-14 md:h-16
                       transition-none md:transition-transform
                       duration-700
-                      [transform-style:preserve-3d]
-                      md:group-hover:[transform:rotateY(180deg)]
+                      transform-3d
+                      md:group-hover:transform-[rotateY(180deg)]
                       mx-auto
                     "
                   >
                     {/* Front */}
-                    <div className="absolute inset-0 [backface-visibility:hidden]">
+                    <div className="absolute inset-0 backface-hidden">
                       <div
                         className="
                           w-full
@@ -310,14 +309,14 @@ export default function FeaturedProducts() {
                           delay-100
                           shadow-md
                           md:group-hover:shadow-lg
-                          md:group-hover:shadow-[#BC5841]/30
+                          md:group-hover:shadow-[#E85222]/30
                         "
                       >
                         <item.icon
                           className="
                             w-4 sm:w-5 md:w-6
                             h-4 sm:h-5 md:h-6
-                            text-[#BC5841]
+                            text-[#E85222]
                             transition-none md:transition-colors
                             duration-500
                             delay-100
@@ -328,18 +327,18 @@ export default function FeaturedProducts() {
                     </div>
 
                     {/* Back */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 backface-hidden transform-[rotateY(180deg)]">
                       <div
                         className="
                           w-full
                           h-full
                           rounded-full
-                          bg-[#BC5841]
+                          bg-[#E85222]
                           flex
                           items-center
                           justify-center
                           shadow-lg
-                          shadow-[#BC5841]/30
+                          shadow-[#E85222]/30
                         "
                       >
                         <item.icon

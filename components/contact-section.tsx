@@ -11,46 +11,25 @@ export default function ContactSection() {
   const locations = [
     {
       id: 1,
-      name: "Hyderabad — Kondapur Branch",
+      name: "Hyderabad — Kompally",
       address: (
         <>
-          3rd Floor, M.R. Supreme, Opp Gem Motors,
+          4rd Floor, Rayudu's Tower, Kaveri Enclave,
           <br />
-          Raghavendra Colony, Kondapur,
+           Satyam Enclave, Kompally
           <br />
-          Hyderabad, Telangana 500084
+          Secunderabad, Telangana 500067
         </>
       ),
-      phone: "+91 95057 38393",
-      phoneLink: "tel:+919505738393",
-      email: "aakrithiskinclinic@gmail.com",
-      emailLink: "mailto:aakrithiskinclinic@gmail.com",
-      hours: "Mon–Sat, 10 AM – 9 PM",
+      phone: "+91 79958 42127",
+      phoneLink: "tel:+917995842127",
+      email: "vedaskinandhairclinic@gmail.com",
+      emailLink: "mailto:vedaskinandhairclinic@gmail.com",
+      hours: "Mon–Sat, 10 AM – 2 PM and 6 PM - 9 PM",
       sunday: "By appointment",
       rating: null,
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.447!2d78.395!3d17.450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb912e0c6e3a6f%3A0x6b8a6f4c4d4d4d4d!2sKondapur%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000",
-    },
-    {
-      id: 2,
-      name: "Visakhapatnam — Maddilapalem Branch",
-      address: (
-        <>
-          Andhra Bank Road, Pithapuram Colony,
-          <br />
-          Opp CMR Central, Maddilapalem,
-          <br />
-          Visakhapatnam, Andhra Pradesh 530017
-        </>
-      ),
-      phone: "+91 70938 81288",
-      phoneLink: "tel:+917093881288",
-      email: "info@aakrithiskinandhairclinic.com",
-      emailLink: "mailto:info@aakrithiskinandhairclinic.com",
-      hours: "Mon–Sat, 10 AM – 9 PM",
-      sunday: null,
-      // rating: "4.9★ (Google Maps)",
-      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.472!2d83.309!3d17.738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395c0c0c0c0c0c%3A0x0c0c0c0c0c0c0c0c!2sMaddilapalem%2C%20Visakhapatnam!5e0!3m2!1sen!2sin!4v1700000000000",
-    },
+      mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.447!2d78.395!3d17.450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb912e0c6e3a6f%3A0x6b8a6f4c4d4d4d4d!2sKompally%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1700000000000",
+    }
   ];
 
   // Animation variants
@@ -125,20 +104,37 @@ export default function ContactSection() {
     }),
   };
 
-  const locationCardVariants = {
+  const contentVariants = {
     hidden: {
       opacity: 0,
-      y: 40,
+      x: -50,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring" as const,
+        duration: 0.7,
+        bounce: 0.3,
+      },
+    },
+  };
+
+  const mapVariants = {
+    hidden: {
+      opacity: 0,
+      x: 50,
       scale: 0.95,
     },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       scale: 1,
       transition: {
         type: "spring" as const,
-        duration: 0.6,
+        duration: 0.7,
         bounce: 0.3,
+        delay: 0.2,
       },
     },
   };
@@ -169,7 +165,7 @@ export default function ContactSection() {
       `}</style>
 
       <div className="max-w-7xl mx-auto w-full px-6 lg:px-10">
-        {/* Enhanced Animated Heading */}
+        {/* Animated Heading */}
         <motion.div
           className="text-center mb-16"
           initial="hidden"
@@ -193,159 +189,160 @@ export default function ContactSection() {
 
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
-        {/* 2x2 Grid Layout */}
+        {/* Side-by-side Layout: Content Left | Map Right */}
         <motion.div
-          className="grid lg:grid-cols-2 gap-8 lg:gap-10"
+          className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {locations.map((location) => (
-            <motion.div
-              key={location.id}
-              variants={locationCardVariants}
-              className="bg-[#F8F5F1] rounded-2xl overflow-hidden border border-[#e8e3de] hover:shadow-lg transition-all duration-300"
-            >
-              {/* Location Details */}
-              <div className="p-6 md:p-8">
-                <h4 className="sans-font text-xl font-bold text-[#111] mb-4">
-                  {location.name}
-                </h4>
-
-                {/* Address */}
-                <div className="flex gap-3 mb-3">
-                  <MapPin className="w-5 h-5 text-[#BC5841] flex-shrink-0 mt-0.5" />
-                  <p className="sans-font text-[#4a5a6a] text-sm leading-relaxed">
-                    {location.address}
-                  </p>
-                </div>
-
-                {/* Phone */}
-                <div className="flex gap-3 mb-2">
-                  <Phone className="w-5 h-5 text-[#BC5841] flex-shrink-0" />
-                  <a
-                    href={location.phoneLink}
-                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#BC5841] transition-colors"
-                  >
-                    {location.phone}
-                  </a>
-                </div>
-
-                {/* Email */}
-                <div className="flex gap-3 mb-4">
-                  <Mail className="w-5 h-5 text-[#BC5841] flex-shrink-0" />
-                  <a
-                    href={location.emailLink}
-                    className="sans-font text-[#4a5a6a] text-sm hover:text-[#BC5841] transition-colors break-all"
-                  >
-                    {location.email}
-                  </a>
-                </div>
-
-                {/* Meta Info */}
-                <div className="sans-font flex flex-wrap gap-4 pt-4 border-t border-[#e8e3de] text-xs text-[#5a6879]">
-                  <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#BC5841]" />
-                    <b>Hours:</b> {location.hours}
-                  </span>
-                  {location.sunday && (
-                    <span>
-                      <b>Sunday:</b> {location.sunday}
-                    </span>
-                  )}
-                  {/* {location.rating && (
-                    <span className="flex items-center gap-1.5">
-                      <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                      {location.rating}
-                    </span>
-                  )} */}
-                </div>
-              </div>
-
-              {/* Map */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
-                <iframe
-                  src={location.mapEmbed}
-                  className="absolute inset-0 w-full h-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  allowFullScreen
-                  title={`Map of ${location.name}`}
-                ></iframe>
-                {/* Map Overlay with Get Directions */}
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location.address.toString().replace(/<br\s*\/?>/g, ' '))}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    absolute
-                    bottom-4
-                    right-4
-                    bg-white/95
-                    backdrop-blur-sm
-                    px-4
-                    py-2
-                    rounded-xl
-                    text-xs
-                    font-semibold
-                    text-[#BC5841]
-                    shadow-lg
-                    hover:bg-white
-                    hover:scale-105
-                    transition-all
-                    duration-300
-                    flex
-                    items-center
-                    gap-1.5
-                    border
-                    border-white/20
-                  "
-                >
-                  <MapPin className="w-3.5 h-3.5" />
-                  Get Directions
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <a
-            href="https://www.aakrithiskinandhairclinic.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              btn-text
-              inline-flex
-              items-center
-              gap-2
-              bg-gradient-to-r
-              from-[#BC5841]
-              to-[#D97A63]
-              text-white
-              px-8
-              py-4
-              rounded-2xl
-              hover:shadow-lg
-              hover:shadow-[#BC5841]/30
-              hover:scale-105
-              transition-all
-              duration-300
-            "
+          {/* Left Side - Content */}
+          <motion.div
+            variants={contentVariants}
+            className="bg-[#F8F5F1] rounded-2xl p-6 md:p-8 lg:p-10 border border-[#e8e3de] flex flex-col"
           >
-            <Phone size={18} />
-            Book a Consultation
-          </a>
+            <h4 className="sans-font text-2xl md:text-3xl font-bold text-[#111] mb-6">
+              {locations[0].name}
+            </h4>
+
+            {/* Address */}
+            <div className="flex gap-3 mb-4">
+              <MapPin className="w-5 h-5 text-[#E85222] shrink-0 mt-0.5" />
+              <p className="sans-font text-[#4a5a6a] text-sm md:text-base leading-relaxed">
+                {locations[0].address}
+              </p>
+            </div>
+
+            {/* Phone */}
+            <div className="flex gap-3 mb-3">
+              <Phone className="w-5 h-5 text-[#E85222] shrink-0" />
+              <a
+                href={locations[0].phoneLink}
+                className="sans-font text-[#4a5a6a] text-sm md:text-base hover:text-[#E85222] transition-colors"
+              >
+                {locations[0].phone}
+              </a>
+            </div>
+
+            {/* Email */}
+            <div className="flex gap-3 mb-6">
+              <Mail className="w-5 h-5 text-[#E85222] shrink-0" />
+              <a
+                href={locations[0].emailLink}
+                className="sans-font text-[#4a5a6a] text-sm md:text-base hover:text-[#E85222] transition-colors break-all"
+              >
+                {locations[0].email}
+              </a>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-[#e8e3de] mb-6" />
+
+            {/* Hours & Info */}
+            <div className="sans-font space-y-2 text-sm md:text-base text-[#5a6879]">
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-[#E85222]" />
+                <span>
+                  <b>Hours:</b> {locations[0].hours}
+                </span>
+              </div>
+              {locations[0].sunday && (
+                <div className="flex items-center gap-2">
+                  <span className="w-4" /> {/* Spacer for alignment */}
+                  <span>
+                    <b>Sunday:</b> {locations[0].sunday}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* CTA Button - Positioned at bottom */}
+            <div className="mt-8 pt-6 border-t border-[#e8e3de]">
+              <a
+                href="https://www.aakrithiskinandhairclinic.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  btn-text
+                  inline-flex
+                  items-center
+                  gap-2
+                  bg-linear-to-r
+                  from-[#E85222]
+                  to-[#FF7A1A]
+                  text-white
+                  px-6
+                  py-3.5
+                  rounded-2xl
+                  hover:shadow-lg
+                  hover:shadow-[#E85222]/30
+                  hover:scale-105
+                  transition-all
+                  duration-300
+                  w-full
+                  sm:w-auto
+                  justify-center
+                "
+              >
+                <Phone size={18} />
+                Book a Consultation
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right Side - Map */}
+          <motion.div
+            variants={mapVariants}
+            className="bg-[#F8F5F1] rounded-2xl overflow-hidden border border-[#e8e3de] relative min-h-[400px] lg:min-h-[500px]"
+          >
+            <iframe
+              src={locations[0].mapEmbed}
+              className="absolute inset-0 w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              title={`Map of ${locations[0].name}`}
+            ></iframe>
+
+            {/* Map Overlay with Get Directions */}
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                locations[0].address.toString().replace(/<br\s*\/?>/g, " ")
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                absolute
+                bottom-4
+                right-4
+                bg-white/95
+                backdrop-blur-sm
+                px-4
+                py-2.5
+                rounded-xl
+                text-sm
+                font-semibold
+                text-[#E85222]
+                shadow-lg
+                hover:bg-white
+                hover:scale-105
+                transition-all
+                duration-300
+                flex
+                items-center
+                gap-2
+                border
+                border-white/20
+              "
+            >
+              <MapPin className="w-4 h-4" />
+              Get Directions
+            </a>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -287,7 +287,7 @@ export default function AllTreatments() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
 
           {/* Optional subtitle with animation */}
@@ -320,11 +320,11 @@ export default function AllTreatments() {
                 whitespace-nowrap
                 transition-all
                 duration-300
-                flex-shrink-0
+                shrink-0
                 ${
                   activeTab === category
-                    ? "bg-[#BC5841] text-white shadow-lg shadow-[#BC5841]/20"
-                    : "bg-white text-[#D97A63] hover:bg-[#eef3f8] border border-[#e8e3de]"
+                    ? "bg-[#E85222] text-white shadow-lg shadow-[#E85222]/20"
+                    : "bg-white text-[#FF7A1A] hover:bg-[#eef3f8] border border-[#e8e3de]"
                 }
               `}
             >
@@ -370,9 +370,9 @@ export default function AllTreatments() {
                   left-0
                   right-0
                   h-0
-                  bg-gradient-to-t
-                  from-[#BC5841]
-                  via-[#D97A63]
+                  bg-linear-to-t
+                  from-[#E85222]
+                  via-[#FF7A1A]
                   to-transparent
                   group-hover:h-full
                   transition-all
@@ -390,9 +390,9 @@ export default function AllTreatments() {
                   left-0
                   right-0
                   h-0
-                  bg-gradient-to-t
-                  from-[#BC5841]
-                  via-[#D97A63]/50
+                  bg-linear-to-t
+                  from-[#E85222]
+                  via-[#FF7A1A]/50
                   to-transparent
                   group-hover:h-2/3
                   transition-all
@@ -405,7 +405,7 @@ export default function AllTreatments() {
 
               {/* Icon - With Flip Animation on Hover */}
               <div className="relative z-10">
-                <div className="[perspective:500px] w-10 sm:w-11 md:w-12 h-10 sm:h-11 md:h-12">
+                <div className="perspective-normal w-10 sm:w-11 md:w-12 h-10 sm:h-11 md:h-12">
                   <div
                     className="
                       relative
@@ -413,12 +413,12 @@ export default function AllTreatments() {
                       h-full
                       transition-transform
                       duration-700
-                      [transform-style:preserve-3d]
-                      group-hover:[transform:rotateY(180deg)]
+                      transform-3d
+                      group-hover:transform-[rotateY(180deg)]
                     "
                   >
                     {/* Front */}
-                    <div className="absolute inset-0 [backface-visibility:hidden]">
+                    <div className="absolute inset-0 backface-hidden">
                       <div
                         className="
                           w-full
@@ -433,14 +433,14 @@ export default function AllTreatments() {
                           duration-300
                           shadow-md
                           group-hover:shadow-lg
-                          group-hover:shadow-[#BC5841]/30
+                          group-hover:shadow-[#E85222]/30
                         "
                       >
                         <treatment.icon
                           className="
                             w-4 sm:w-4.5 md:w-5
                             h-4 sm:h-4.5 md:h-5
-                            text-[#BC5841]
+                            text-[#E85222]
                             transition-colors
                             duration-300
                           "
@@ -450,18 +450,18 @@ export default function AllTreatments() {
                     </div>
 
                     {/* Back */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                    <div className="absolute inset-0 backface-hidden transform-[rotateY(180deg)]">
                       <div
                         className="
                           w-full
                           h-full
                           rounded-full
-                          bg-[#BC5841]
+                          bg-[#E85222]
                           flex
                           items-center
                           justify-center
                           shadow-lg
-                          shadow-[#BC5841]/30
+                          shadow-[#E85222]/30
                         "
                       >
                         <treatment.icon
@@ -487,7 +487,7 @@ export default function AllTreatments() {
                   text-[#111]
                   mb-1.5 sm:mb-2
                   leading-tight
-                  min-h-[40px] sm:min-h-[46px] md:min-h-[52px]
+                  min-h-10 sm:min-h-11.5 md:min-h-13
                   relative
                   z-10
                   group-hover:text-white
@@ -506,7 +506,7 @@ export default function AllTreatments() {
                   text-xs sm:text-sm
                   text-[#5a6879]
                   leading-relaxed
-                  flex-grow
+                  grow
                   relative
                   z-10
                   group-hover:text-white/90
@@ -538,7 +538,7 @@ export default function AllTreatments() {
                     sans-font
                     text-[10px] sm:text-xs
                     font-medium
-                    text-[#BC5841]
+                    text-[#E85222]
                     bg-[#eef3f8]
                     px-2.5 sm:px-3
                     py-0.5 sm:py-1

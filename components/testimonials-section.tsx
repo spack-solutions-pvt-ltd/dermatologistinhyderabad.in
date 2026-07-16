@@ -11,30 +11,28 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: "Satya Juttiga",
+      name: "charan babu muppa",
       initials: "SJ",
       treatment: "Laser Hair Reduction",
       rating: 5,
       quote:
-        "I came here for facial hair reduction. I'm writing this after 3 sessions — results are amazing. Services are great and the doctor and staff are very friendly.",
+        "Vedha skincare hospital is Excellent.I had taken skin peel option of my face and body. Excellent improvement for boy and face. Everything is Excellent.",
     },
     {
       id: 2,
-      name: "Vinodhini J",
+      name: "Diya Sai Class 10 B",
       initials: "VJ",
-      treatment: "Cyst Excision",
       rating: 5,
       quote:
-        "Excellent doctor — very polite, understanding, and skilled. My cyst excision was quick, painless, and well explained. I felt safe and cared for at every step.",
+        "Very good experience, doctor radha treats every patient with care and heals them,my acne got clear because of her,thanks to her😊",
     },
     {
       id: 3,
-      name: "Kanta Swaroop",
+      name: "Naravoina Nikhila",
       initials: "KS",
-      treatment: "Skin Consultation",
       rating: 5,
       quote:
-        "Dr. Swetha ma'am takes the time to explain the diagnosis and the treatment options clearly. The staff was friendly and I felt heard throughout the process.",
+        "Dr radha madam garu treated good and staff is very polite i suggest to visit best doctor in kompally",
     },
   ];
 
@@ -252,7 +250,11 @@ export default function TestimonialsSection() {
   const words = headingText.split(" ");
 
   return (
-    <section id="testimonials" ref={sectionRef} className="py-12 sm:py-16 md:py-20 bg-white">
+    <section
+      id="testimonials"
+      ref={sectionRef}
+      className="py-12 sm:py-16 md:py-20 bg-white"
+    >
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-10">
         {/* Enhanced Animated Heading */}
         <motion.div
@@ -280,7 +282,7 @@ export default function TestimonialsSection() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -311,7 +313,7 @@ export default function TestimonialsSection() {
               "
             >
               {/* Stars - Responsive */}
-              <motion.div 
+              <motion.div
                 className="flex gap-0.5 mb-3 sm:mb-4"
                 variants={starsVariants}
               >
@@ -320,7 +322,7 @@ export default function TestimonialsSection() {
 
               {/* Quote - Responsive */}
               <motion.blockquote
-                className="text-[#2d2d2d] text-xs sm:text-sm md:text-base leading-relaxed flex-grow mb-4 sm:mb-5 md:mb-6"
+                className="text-[#2d2d2d] text-xs sm:text-sm md:text-base leading-relaxed grow mb-4 sm:mb-5 md:mb-6"
                 variants={quoteVariants}
               >
                 "{testimonial.quote}"
@@ -334,14 +336,14 @@ export default function TestimonialsSection() {
                     w-8 sm:w-9 md:w-10
                     h-8 sm:h-9 md:h-10
                     rounded-full
-                    bg-[#BC5841]
+                    bg-[#E85222]
                     text-white
                     flex
                     items-center
                     justify-center
                     font-bold
                     text-xs sm:text-sm
-                    flex-shrink-0
+                    shrink-0
                   "
                   variants={avatarVariants}
                 >
@@ -370,7 +372,7 @@ export default function TestimonialsSection() {
           animate={isInView ? "visible" : "hidden"}
         >
           <a
-            href="https://maps.app.goo.gl/qdpgmGTV93FJfXyZ7"
+            href="https://www.google.com/maps/place/Veda+Skin+and+Hair+Clinic+%7C+Kompally,+Hyderabad/@17.5244503,78.4806357,830m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bcb85f5dab0901d:0x1a45bbf2ea551af4!8m2!3d17.5244503!4d78.4832106!16s%2Fg%2F11px7yxf7_?entry=ttu&g_ep=EgoyMDI2MDcxMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -386,21 +388,21 @@ export default function TestimonialsSection() {
               text-white
               overflow-hidden
               group
-              shadow-lg shadow-[#BC5841]/30
-              hover:shadow-xl hover:shadow-[#BC5841]/50
+              shadow-lg shadow-[#E85222]/30
+              hover:shadow-xl hover:shadow-[#E85222]/50
               transition-all
               duration-300
               hover:scale-105
             "
           >
             {/* Gradient Background with Right-to-Left Transition */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
+            <span className="absolute inset-0 bg-linear-to-r from-[#E85222] to-[#FF7A1A] transition-all duration-500 ease-in-out group-hover:bg-linear-to-l group-hover:from-[#FF7A1A] group-hover:to-[#E85222]"></span>
 
             {/* Gradient Shimmer Effect */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
 
-            <MapPin size={16} className="relative z-10 sm:w-[18px] sm:h-[18px]" />
-            <span className="relative z-10">Read all 582+ Google Reviews</span>
+            <MapPin size={16} className="relative z-10 sm:w-4.5 sm:h-4.5" />
+            <span className="relative z-10">Read all 982+ Google Reviews</span>
           </a>
         </motion.div>
       </div>

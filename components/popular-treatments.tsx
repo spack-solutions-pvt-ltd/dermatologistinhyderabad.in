@@ -264,7 +264,7 @@ export default function PopularTreatments() {
   const words = headingText.split(" ");
 
   return (
-    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-[#f0f4f8] via-white to-[#e8edf5] overflow-hidden">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 bg-linear-to-br from-[#f0f4f8] via-white to-[#e8edf5] overflow-hidden">
       {/* Font styles */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -337,7 +337,7 @@ export default function PopularTreatments() {
           .transition-all, .transition-transform, .transition-opacity {
             transition: none !important;
           }
-          .hover\\:shadow-\\[\\#BC5841\\]\\/30 {
+          .hover\\:shadow-\\[\\#E85222\\]\\/30 {
             box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
           }
           .hover\\:scale-105 {
@@ -347,12 +347,12 @@ export default function PopularTreatments() {
       `}</style>
 
       <div className="relative">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#BC5841]/3 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#D97A63]/3 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-[#E85222]/3 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#FF7A1A]/3 rounded-full translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-[#FBF4EC]/5 rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
         <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
           style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #BC5841 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, #E85222 1px, transparent 1px)`,
             backgroundSize: '40px 40px'
           }}>
         </div>
@@ -383,7 +383,7 @@ export default function PopularTreatments() {
 
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-gradient-to-r from-[#BC5841] via-[#D97A63] to-[#BC5841] rounded-full mx-auto mt-3"
+            className="h-1 bg-linear-to-r from-[#E85222] via-[#FF7A1A] to-[#E85222] rounded-full mx-auto mt-3"
             style={{ width: "200px" }}
           />
 
@@ -415,11 +415,11 @@ export default function PopularTreatments() {
                 shadow-sm sm:shadow-md
                 ${treatment.borderColor}
                 relative
-                flex-shrink-0
+                shrink-0
               `}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#BC5841]/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#BC5841] via-[#D97A63] to-[#BC5841] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-transparent via-[#E85222]/3 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-[#E85222] via-[#FF7A1A] to-[#E85222] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="p-2 sm:p-3 pb-0">
                 <motion.div 
@@ -434,14 +434,14 @@ export default function PopularTreatments() {
                       className="object-cover"
                     />
                   ) : (
-                    <div className={`w-full h-full bg-gradient-to-br ${treatment.gradient} flex items-center justify-center`}>
+                    <div className={`w-full h-full bg-linear-to-br ${treatment.gradient} flex items-center justify-center`}>
                       <div className="text-5xl sm:text-6xl md:text-7xl">
                         {treatment.emoji}
                       </div>
                     </div>
                   )}
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
                 </motion.div>
               </div>
 
@@ -456,7 +456,7 @@ export default function PopularTreatments() {
                     text-[#111]
                     mb-3 sm:mb-4
                     leading-tight
-                    min-h-[44px] sm:min-h-[50px] md:min-h-[56px]
+                    min-h-11 sm:min-h-12.5 md:min-h-14
                   "
                   dangerouslySetInnerHTML={{ __html: treatment.title }}
                 />
@@ -481,9 +481,9 @@ export default function PopularTreatments() {
                     overflow-hidden
                   "
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63]"></span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full hidden sm:block"></span>
-                  <Calendar size={14} className="relative z-10 sm:w-[16px] sm:h-[16px]" />
+                  <span className="absolute inset-0 bg-linear-to-r from-[#E85222] to-[#FF7A1A]"></span>
+                  <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full hidden sm:block"></span>
+                  <Calendar size={14} className="relative z-10 sm:w-4 sm:h-4" />
                   <span className="relative z-10">Book Now</span>
                 </motion.a>
               </motion.div>

@@ -26,8 +26,8 @@ export default function Home() {
       <AboutSection/>
       <AllTreatments/>
       <TechSection/>
-      <GallerySection/>
       <ClinicGallery/>
+      <GallerySection/>
       <TestimonialsSection/>
       <FAQSection/>
       <ContactSection/>

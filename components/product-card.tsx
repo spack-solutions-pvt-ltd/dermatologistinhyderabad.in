@@ -24,7 +24,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="group flex flex-col h-full rounded-2xl overflow-hidden bg-background border border-muted hover:border-primary transition-all duration-300">
       {/* Image */}
       <div
-        className="relative h-48 bg-gradient-to-br from-secondary to-muted overflow-hidden flex items-center justify-center"
+        className="relative h-48 bg-linear-to-br from-secondary to-muted overflow-hidden flex items-center justify-center"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col flex-grow p-6 gap-3">
+      <div className="flex flex-col grow p-6 gap-3">
         <div>
           <p className="text-xs font-semibold text-primary uppercase tracking-wider">
             {product.category}
@@ -47,7 +47,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </h3>
         </div>
 
-        <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
+        <p className="text-sm text-muted-foreground leading-relaxed grow">
           {product.description}
         </p>
 

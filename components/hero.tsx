@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import { useState } from "react";
 import Image from "next/image";
 import image1 from "../asserts/image1.png";
+import image1resize from "../asserts/image1resize1.png";
 import {
   Calendar,
   MessageCircle,
@@ -14,6 +15,11 @@ import {
   Star,
   Shield,
   Sparkles,
+  HeartPulse,
+  Scissors,
+  BadgePlus,
+  UserRound,
+  Venus,
 } from "lucide-react";
 
 export default function Hero() {
@@ -22,28 +28,28 @@ export default function Hero() {
   const stats = [
     {
       icon: Award,
-      value: "15+",
+      value: "10",
       label: "Years Experience",
     },
     {
       icon: Users,
-      value: "20k+",
+      value: "25k+",
       label: "Happy Patients",
+    },
+    {
+      icon: Scissors,
+      value: "4000+",
+      label: "Surgeries",
     },
     {
       icon: Settings,
       value: "Advanced",
       label: "Technology",
     },
-    {
-      icon: MapPin,
-      value: "2",
-      label: "Locations",
-    },
   ];
 
   // WhatsApp number (without + sign for the link)
-  const whatsappNumber = "919505738393";
+  const whatsappNumber = "917995842127";
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   // Split the text into characters
@@ -80,11 +86,8 @@ text-[clamp(38px,5vw,62px)]
 leading-[1.04]
 tracking-[-0.015em]
 text-[#1A1A1A]
-mb-[22px]
-text-[24px] sm:text-[28px] md:text-[52px] lg:text-[64px]
-leading-[1.1] sm:leading-[1.05] md:leading-[0.95]
+mb-5.5 sm:text-[28px] md:text-[52px] lg:text-[64px] sm:leading-[1.05] md:leading-[0.95]
 font-medium
-tracking-tight
 mx-auto sm:mx-0"
               >
                 Expert{" "}
@@ -111,7 +114,7 @@ mx-auto sm:mx-0"
                                 }deg) scale(${1 + Math.random() * 0.15})`
                               : "translateY(0px) rotate(0deg) scale(1)",
                             transitionDelay: `${index * 30}ms`,
-                            color: isHovered ? "#BC5841" : "#D97A63",
+                            color: isHovered ? "#FF7A1A" : "#E85222",
                             marginRight: isSpace ? "0.15em" : "0",
                             fontWeight: "inherit",
                           } as CSSProperties
@@ -140,7 +143,7 @@ mx-auto sm:mx-0"
                 {stats.map((item, index) => (
                   <div
                     key={index}
-                    className="sans-font group bg-[#fff] rounded-[12px] sm:rounded-[14px] md:rounded-[20px] py-1.5 sm:py-2 md:py-3 px-1.5 sm:px-2 md:px-3.5 hover:md:-translate-y-2 hover:md:shadow-xl transition-none md:transition-all duration-300 flex flex-col items-center text-center"
+                    className="sans-font group bg-white rounded-[12px] sm:rounded-[14px] md:rounded-[20px] py-1.5 sm:py-2 md:py-3 px-1.5 sm:px-2 md:px-3.5 hover:md:-translate-y-2 hover:md:shadow-xl transition-none md:transition-all duration-300 flex flex-col items-center text-center"
                     style={
                       {
                         animation: `float ${3 + index * 0.5}s ease-in-out infinite`,
@@ -149,18 +152,18 @@ mx-auto sm:mx-0"
                     }
                   >
                     {/* Icon with Flip Animation - Desktop only */}
-                    <div className="[perspective:500px]">
-                      <div className="relative w-5 sm:w-7 md:w-10 h-5 sm:h-7 md:h-10 transition-none md:transition-transform duration-700 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(180deg)]">
+                    <div className="perspective-normal">
+                      <div className="relative w-5 sm:w-7 md:w-10 h-5 sm:h-7 md:h-10 transition-none md:transition-transform duration-700 transform-3d md:group-hover:transform-[rotateY(180deg)]">
                         {/* Front */}
-                        <div className="absolute inset-0 [backface-visibility:hidden]">
+                        <div className="absolute inset-0 backface-hidden">
                           <div className="w-full h-full bg-white rounded-full flex items-center justify-center shadow-md">
-                            <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-[#BC5841]" />
+                            <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-[#E85222]" />
                           </div>
                         </div>
 
                         {/* Back */}
-                        <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                          <div className="w-full h-full bg-[#BC5841] rounded-full flex items-center justify-center shadow-md">
+                        <div className="absolute inset-0 backface-hidden transform-[rotateY(180deg)]">
+                          <div className="w-full h-full bg-[#E85222] rounded-full flex items-center justify-center shadow-md">
                             <item.icon className="w-2.5 sm:w-3 md:w-4 h-2.5 sm:h-3 md:h-4 text-white" />
                           </div>
                         </div>
@@ -185,7 +188,7 @@ mx-auto sm:mx-0"
                   href="https://www.aakrithiskinandhairclinic.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-text bg-gradient-to-r from-[#BC5841] to-[#D97A63] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  className="btn-text bg-linear-to-r from-[#E85222] to-[#FF7A1A] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   <Calendar size={14} className="sm:w-4 sm:h-4" />
                   Book Appointment
@@ -196,11 +199,11 @@ mx-auto sm:mx-0"
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-[#D97A63] text-[#D97A63] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#BC5841] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105 w-full sm:w-auto"
+                  className="border-2 border-[#E85222] text-[#FF7A1A] px-4 sm:px-6 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-xl sm:rounded-2xl font-semibold flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm md:text-base transition-none md:transition-all duration-300 hover:md:bg-[#E85222] hover:md:text-white hover:md:shadow-lg hover:md:shadow-[#154f85]/30 hover:md:scale-105 w-full sm:w-auto"
                 >
                   <MessageCircle
                     size={14}
-                    className="sm:w-[16px] sm:h-[16px] md:w-[18px] md:h-[18px]"
+                    className="sm:w-4 sm:h-4 md:w-4.5 md:h-4.5"
                   />
                   WhatsApp Us
                 </a>
@@ -210,7 +213,7 @@ mx-auto sm:mx-0"
             {/* RIGHT - Image Section */}
             <div className="flex justify-center items-center order-1 lg:order-2">
               <div
-                className="relative w-[200px] sm:w-[260px] md:w-[380px] lg:w-[440px] h-[220px] sm:h-[280px] md:h-[440px] lg:h-[600px] rounded-[20px] sm:rounded-[28px] md:rounded-[40px] bg-gradient-to-br from-[#f2cdbd] to-[#e8b8a5] overflow-visible shadow-2xl mx-auto"
+                className="relative w-50 sm:w-65 md:w-95 lg:w-110 h-55 sm:h-70 md:h-110 lg:h-150 rounded-[20px] sm:rounded-[28px] md:rounded-[40px] bg-linear-to-br from-[#f7d6be] to-[#FF7A1A] overflow-visible shadow-2xl mx-auto"
                 style={
                   {
                     animation: "float-slow 4s ease-in-out infinite",
@@ -218,22 +221,22 @@ mx-auto sm:mx-0"
                 }
               >
                 {/* Doctor Image */}
-                <div className="absolute inset-0 rounded-[20px] sm:rounded-[28px] md:rounded-[40px] overflow-hidden">
+                <div className="absolute h-90vh inset-0 rounded-[20px] sm:rounded-[28px] md:rounded-[40px] overflow-hidden">
                   <Image
-                    src={image1}
-                    alt="Dr. Swetha Ravi Penmetsa"
+                    src={image1resize}
+                    alt="DR. RADHA PENUMATSA"
                     fill
                     priority
                     className="object-cover object-center"
                   />
 
                   {/* Overlay Gradient for text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/20 to-transparent"></div>
 
                   {/* Doctor Name Overlay */}
                   <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-0 right-0 text-center px-3 sm:px-4 z-10">
                     <div className="sans-font text-[10px] sm:text-sm md:text-lg lg:text-xl font-bold text-white drop-shadow-lg">
-                      Dr. Swetha Ravi Penmetsa
+                      Dr. Radha Penumatsa
                     </div>
                     <div className="sans-font text-[8px] sm:text-[10px] md:text-xs text-white/90 mt-0.5 drop-shadow-lg">
                       MD Dermatologist
@@ -244,7 +247,7 @@ mx-auto sm:mx-0"
 
                 {/* Rating Badge - moved further right */}
                 <div
-                  className="absolute top-2 sm:top-3 md:top-6 lg:top-8 right-[-12px] sm:right-[-24px] md:right-[-48px] lg:right-[-60px] bg-white/95 backdrop-blur-sm px-1.5 sm:px-2 md:px-4 py-1 sm:py-1.5 md:py-3 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110"
+                  className="absolute top-2 sm:top-3 md:top-6 lg:top-8 -right-3 sm:-right-6 md:-right-12 lg:-right-15 bg-white/95 backdrop-blur-sm px-1.5 sm:px-2 md:px-4 py-1 sm:py-1.5 md:py-3 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110"
                   style={
                     {
                       animation: "float-badge 2.5s ease-in-out infinite",
@@ -264,7 +267,7 @@ mx-auto sm:mx-0"
                   </div>
                   <div className="flex items-center gap-0.5 sm:gap-1 mt-0.5">
                     <span className="sans-font font-bold text-[10px] sm:text-sm md:text-xl text-[#111]">
-                      4.8+
+                      4.9
                     </span>
                     <span className="sans-font text-[6px] sm:text-[7px] md:text-xs text-slate-500">
                       Patient Rating
@@ -279,7 +282,7 @@ mx-auto sm:mx-0"
 
                 {/* Dermatologist Badge - moved further right */}
                 <div
-                  className="absolute top-1/3 right-[-16px] sm:right-[-28px] md:right-[-56px] lg:right-[-70px] -translate-y-1/2 bg-white/95 backdrop-blur-sm px-2 sm:px-2.5 md:px-5 py-1.5 sm:py-2 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110"
+                  className="absolute top-1/3 -right-4 sm:-right-7 md:-right-14 lg:-right-17.5 -translate-y-1/2 bg-white/95 backdrop-blur-sm px-2 sm:px-2.5 md:px-5 py-1.5 sm:py-2 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110"
                   style={
                     {
                       animation: "float-badge 2.5s ease-in-out infinite",
@@ -288,11 +291,11 @@ mx-auto sm:mx-0"
                   }
                 >
                   <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
-                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#D97A63]/10 flex items-center justify-center">
-                      <Shield className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#D97A63]" />
+                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#E85222]/10 flex items-center justify-center">
+                      <Shield className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#E85222]" />
                     </div>
                     <div>
-                      <div className="sans-font font-bold text-sm sm:text-lg md:text-2xl text-[#D97A63]">
+                      <div className="sans-font font-bold text-sm sm:text-lg md:text-2xl text-[#E85222]">
                         MD
                       </div>
                       <div className="sans-font text-[6px] sm:text-[7px] md:text-xs text-slate-600 font-medium">
@@ -300,7 +303,7 @@ mx-auto sm:mx-0"
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -bottom-1 -left-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#D97A63] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -bottom-1 -left-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#E85222] rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-[4px] sm:text-[5px] md:text-[10px] font-bold">
                       ★
                     </span>
@@ -309,7 +312,7 @@ mx-auto sm:mx-0"
 
                 {/* Specialist Badge - moved up on mobile */}
                 <div
-                  className="absolute bottom-8 sm:bottom-20 md:bottom-16 lg:bottom-23 right-[-12px] sm:right-[-24px] md:right-[-48px] lg:right-[-60px] bg-white/95 backdrop-blur-sm px-2 sm:px-2.5 md:px-5 py-1.5 sm:py-2 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110 mobile-specialist-badge"
+                  className="absolute bottom-8 sm:bottom-20 md:bottom-16 lg:bottom-23 -right-3 sm:-right-6 md:-right-12 lg:-right-15 bg-white/95 backdrop-blur-sm px-2 sm:px-2.5 md:px-5 py-1.5 sm:py-2 md:py-4 rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl border border-white/20 z-20 transition-none md:transition-transform duration-300 hover:md:scale-110 mobile-specialist-badge"
                   style={
                     {
                       animation: "float-badge 2.5s ease-in-out infinite",
@@ -318,8 +321,8 @@ mx-auto sm:mx-0"
                   }
                 >
                   <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2.5">
-                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#D97A63]/10 flex items-center justify-center">
-                      <Sparkles className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#D97A63]" />
+                    <div className="w-4 sm:w-5 md:w-10 h-4 sm:h-5 md:h-10 rounded-full bg-[#E85222]/10 flex items-center justify-center">
+                      <Sparkles className="w-2.5 sm:w-3 md:w-5 h-2.5 sm:h-3 md:h-5 text-[#E85222]" />
                     </div>
                     <div>
                       <div className="sans-font font-bold text-[8px] sm:text-[10px] md:text-lg text-[#111]">
@@ -330,7 +333,7 @@ mx-auto sm:mx-0"
                       </div>
                     </div>
                   </div>
-                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#D97A63] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-1 -right-1 w-2.5 sm:w-3.5 md:w-5 h-2.5 sm:h-3.5 md:h-5 bg-[#E85222] rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white text-[4px] sm:text-[5px] md:text-[10px] font-bold">
                       ✦
                     </span>

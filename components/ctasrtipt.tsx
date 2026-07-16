@@ -2,7 +2,8 @@ import { Calendar, Phone } from "lucide-react";
 
 export default function CTAStrip() {
   return (
-    <section className="py-16 md:py-20 bg-[#D97A63]">
+    // BC5841
+    <section className="py-16 md:py-20 bg-[#FF7A1A]">
       {/* Font styles */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -31,7 +32,7 @@ export default function CTAStrip() {
 
         {/* Description */}
         <p className="sans-font text-white/80 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-          Talk to Dr. Swetha and get a personalised treatment roadmap — no
+          Talk to Dr. Radha and get a personalised treatment roadmap — no
           pressure, no upselling, just clinical answers.
         </p>
 
@@ -47,7 +48,7 @@ export default function CTAStrip() {
               items-center
               gap-2
               bg-white
-              text-[#BC5841]
+              text-[#E85222]
               px-6
               md:px-8
               py-3
@@ -81,14 +82,14 @@ export default function CTAStrip() {
               md:py-4
               rounded-2xl
               hover:bg-white
-              hover:text-[#BC5841]
+              hover:text-[#E85222]
               transition-all
               duration-300
               hover:scale-105
             "
           >
             <Phone size={18} />
-            Call +91 95057 38393
+            Call +91 79958 42127
           </a>
         </div>
       </div>

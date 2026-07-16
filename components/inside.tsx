@@ -239,7 +239,7 @@ export default function ClinicGallery() {
   };
 
   // Split heading into words for word-by-word animation
-  const headingText = "Inside Aakrithi";
+  const headingText = "Inside Veda";
   const words = headingText.split(" ");
 
   return (
@@ -291,7 +291,7 @@ export default function ClinicGallery() {
           {/* Animated underline */}
           <motion.div
             variants={underlineVariants}
-            className="h-1 bg-[#BC5841] rounded-full mx-auto mt-3 sm:mt-4"
+            className="h-1 bg-[#E85222] rounded-full mx-auto mt-3 sm:mt-4"
           />
         </motion.div>
 
@@ -344,7 +344,7 @@ export default function ClinicGallery() {
                 <Wrapper {...wrapperProps} className="block h-full">
                   {/* Image */}
                   <motion.div
-                    className="relative w-full aspect-[4/3] md:aspect-auto md:h-[280px] overflow-hidden"
+                    className="relative w-full aspect-4/3 md:aspect-auto md:h-70 overflow-hidden"
                     variants={imageVariants}
                   >
                     <Image
@@ -356,7 +356,7 @@ export default function ClinicGallery() {
                     />
 
                     {/* Overlay Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent"></div>
 
                     {/* Caption */}
                     <motion.div
@@ -406,16 +406,16 @@ export default function ClinicGallery() {
               hover:scale-105
               group
               shadow-lg
-              shadow-[#BC5841]/30
+              shadow-[#E85222]/30
               hover:shadow-xl
-              hover:shadow-[#BC5841]/50
+              hover:shadow-[#E85222]/50
             "
           >
             {/* Gradient Background with Right-to-Left Transition */}
-            <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
+            <span className="absolute inset-0 bg-linear-to-r from-[#E85222] to-[#FF7A1A] transition-all duration-500 ease-in-out group-hover:bg-linear-to-l group-hover:from-[#FF7A1A] group-hover:to-[#E85222]"></span>
 
             {/* Gradient Shimmer Effect */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+            <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
 
             <Calendar size={18} className="relative z-10" />
             <span className="relative z-10">Book a Visit</span>

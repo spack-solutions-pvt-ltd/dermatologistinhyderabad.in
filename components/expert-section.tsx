@@ -13,7 +13,7 @@ import {
   Shield,
   Sparkles as SparklesIcon,
 } from "lucide-react";
-import image8 from "../asserts/image8.png";
+import image1resize2 from "../asserts/image1resize2.png";
 
 export default function ExpertSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -23,7 +23,7 @@ export default function ExpertSection() {
     { icon: Award, text: "MD Dermatology" },
     { icon: Scissors, text: "Hair Transplant Surgeon" },
     { icon: Sparkles, text: "Cosmetic Dermatologist" },
-    { icon: Clock, text: "15+ Years of Experience" },
+    { icon: Clock, text: "10 Years of Experience" },
   ];
 
   // Animation variants
@@ -189,18 +189,18 @@ export default function ExpertSection() {
               className="
                 relative
                 w-full
-                aspect-[4/5]
-                max-w-[500px]
+                aspect-4/5
+                max-w-125
                 mx-auto
                 rounded-[40px]
                 overflow-hidden
-                bg-[#d4c5b8]
+                bg-[#f7d6be]
                 shadow-lg
               "
             >
               {/* Doctor Image */}
               <Image
-                src={image8}
+                src={image1resize2}
                 alt="Dr. Swetha Ravi Penmetsa"
                 fill
                 priority
@@ -208,17 +208,17 @@ export default function ExpertSection() {
               />
 
               {/* Overlay Gradient for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/20 to-transparent"></div>
 
               {/* Doctor Name Overlay - Bottom */}
               <div className="absolute bottom-6 left-0 right-0 text-center px-4 z-10">
                 <p className="playfair-heading text-xl font-semibold text-white drop-shadow-lg">
-                  Dr. Swetha Ravi Penmetsa
+                  Dr. Radha Penumatsa
                 </p>
                 <p className="sans-font text-sm text-white/90 mt-1 drop-shadow-lg">
                   MD Dermatologist
                 </p>
-                <div className="mt-3 w-16 h-[2px] bg-white/60 mx-auto rounded-full"></div>
+                <div className="mt-3 w-16 h-0.5 bg-white/60 mx-auto rounded-full"></div>
               </div>
             </div>
 
@@ -227,7 +227,7 @@ export default function ExpertSection() {
               className="
                 absolute
                 bottom-20
-                right-[-12px]
+                -right-3
                 bg-white/95
                 backdrop-blur-sm
                 px-4
@@ -239,18 +239,18 @@ export default function ExpertSection() {
                 z-20
                 hidden
                 sm:block
-                min-w-[110px]
+                min-w-27.5
               "
               variants={badgeVariants}
               custom={2}
             >
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-full bg-[#D97A63]/10 flex items-center justify-center">
-                  <SparklesIcon className="w-4.5 h-4.5 text-[#D97A63]" />
+                <div className="w-9 h-9 rounded-full bg-[#FF7A1A]/10 flex items-center justify-center">
+                  <SparklesIcon className="w-4.5 h-4.5 text-[#FF7A1A]" />
                 </div>
                 <div>
                   <div className="sans-font font-bold text-sm text-[#111] leading-tight">
-                    15+ Years
+                    10 Years
                   </div>
                   <div className="sans-font text-[10px] text-slate-500 font-medium">
                     of Excellence
@@ -270,7 +270,7 @@ export default function ExpertSection() {
                 tracking-[6px]
                 text-xs
                 font-semibold
-                text-[#BC5841]
+                text-[#E85222]
                 mb-4
               "
               variants={textVariants}
@@ -283,7 +283,7 @@ export default function ExpertSection() {
               className="playfair-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-[#111] mb-3"
               variants={titleVariants}
             >
-              Dr. Swetha Ravi Penmetsa
+             Dr. Radha Penumatsa
             </motion.h2>
 
             {/* Role */}
@@ -291,7 +291,7 @@ export default function ExpertSection() {
               className="
                 sans-font
                 text-lg
-                text-[#BC5841]
+                text-[#E85222]
                 font-medium
                 mb-6
               "
@@ -321,14 +321,14 @@ export default function ExpertSection() {
                       w-6
                       h-6
                       rounded-full
-                      bg-[#BC5841]/10
+                      bg-[#E85222]/10
                       flex
                       items-center
                       justify-center
-                      flex-shrink-0
+                      shrink-0
                     "
                   >
-                    <cred.icon className="w-3.5 h-3.5 text-[#BC5841]" />
+                    <cred.icon className="w-3.5 h-3.5 text-[#E85222]" />
                   </span>
                   {cred.text}
                 </motion.li>
@@ -357,17 +357,17 @@ export default function ExpertSection() {
                 w-fit
                 group
                 shadow-lg
-                shadow-[#BC5841]/30
+                shadow-[#E85222]/30
                 hover:shadow-xl
-                hover:shadow-[#BC5841]/50
+                hover:shadow-[#E85222]/50
               "
               variants={buttonVariants}
             >
               {/* Gradient Background with Right-to-Left Transition */}
-              <span className="absolute inset-0 bg-gradient-to-r from-[#BC5841] to-[#D97A63] transition-all duration-500 ease-in-out group-hover:bg-gradient-to-l group-hover:from-[#D97A63] group-hover:to-[#BC5841]"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-[#E85222] to-[#FF7A1A] transition-all duration-500 ease-in-out group-hover:bg-linear-to-l group-hover:from-[#FF7A1A] group-hover:to-[#E85222]"></span>
 
               {/* Gradient Shimmer Effect */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
+              <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out"></span>
 
               <Calendar size={18} className="relative z-10" />
               <span className="relative z-10">Book Consultation</span>
