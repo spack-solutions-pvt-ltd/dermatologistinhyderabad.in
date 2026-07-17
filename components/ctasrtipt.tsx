@@ -39,7 +39,7 @@ export default function CTAStrip() {
         {/* Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
           <a
-            href="https://vedaskinandhair.com/"
+            // href="https://vedaskinandhair.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="

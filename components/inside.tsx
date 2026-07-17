@@ -17,17 +17,17 @@ export default function ClinicGallery() {
   const galleryItems = [
     {
       id: 1,
-      title: "Kondapur, Hyderabad",
-      subtitle: "Flagship clinic — Raghavendra Colony",
+      title: "Kompally, Hyderabad",
+      subtitle: "Flagship clinic",
       image: img1,
       span: "md:col-span-2",
       link: "#book",
     },
     {
       id: 2,
-      title: "Visakhapatnam",
-      subtitle: "Maddilapalem branch",
-      image: img2,
+      title: "Hyderabad",
+      subtitle: "Kompally branch",
+      image: img3,
       span: "",
       link: "#book",
     },
@@ -35,7 +35,7 @@ export default function ClinicGallery() {
       id: 3,
       title: "Waiting Area",
       subtitle: "Calm, private, comfortable",
-      image: img3,
+      image: img2,
       span: "",
       link: null,
     },
@@ -302,8 +302,8 @@ export default function ClinicGallery() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          Two locations. The same standard of care. Step inside our Kondapur and
-          Visakhapatnam clinics — sterile treatment rooms, comfortable
+          Two locations. The same standard of care. Step inside our Kompally and
+          Hyderabad clinics — sterile treatment rooms, comfortable
           consultation spaces, and medical-grade dermatology technology, all
           under one roof.
         </motion.p>
@@ -387,7 +387,7 @@ export default function ClinicGallery() {
           animate={isInView ? "visible" : "hidden"}
         >
           <a
-            href="https://vedaskinandhair.com/"
+            // href="https://vedaskinandhair.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="
