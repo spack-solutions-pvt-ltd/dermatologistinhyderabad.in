@@ -263,7 +263,7 @@ export default function ContactSection() {
             {/* CTA Button - Positioned at bottom */}
             <div className="mt-8 pt-6 border-t border-[#e8e3de]">
               <a
-                href="https://www.aakrithiskinandhairclinic.com/"
+                href="https://vedaskinandhair.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="

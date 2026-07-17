@@ -191,7 +191,7 @@ export default function Header() {
                 +91 95057 38393
               </a>
               <a
-                href="https://www.aakrithiskinandhairclinic.com/"
+                href="https://vedaskinandhair.com/"
                 className="btn-text bg-linear-to-r from-[#E85222 ] to-[#FF7A1A] text-white px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 w-full"
               >
                 <Calendar size={16} />

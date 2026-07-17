@@ -337,7 +337,7 @@ export default function ExpertSection() {
 
             {/* CTA Button with Gradient Effect */}
             <motion.a
-              href="https://www.aakrithiskinandhairclinic.com/"
+              href="https://vedaskinandhair.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="

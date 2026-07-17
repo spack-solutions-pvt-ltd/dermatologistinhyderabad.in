@@ -4,11 +4,11 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { MapPin, Calendar } from "lucide-react";
-import img1 from "../asserts/img1.webp";
-import img2 from "../asserts/img2.webp";
-import img3 from "../asserts/img3.webp";
-import img4 from "../asserts/img4.webp";
-import img5 from "../asserts/img5.webp";
+import img1 from "../asserts/img1.png";
+import img2 from "../asserts/img2.png";
+import img3 from "../asserts/img3.png";
+import img4 from "../asserts/img4.png";
+import img5 from "../asserts/img5.png";
 
 export default function ClinicGallery() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -387,7 +387,7 @@ export default function ClinicGallery() {
           animate={isInView ? "visible" : "hidden"}
         >
           <a
-            href="https://www.aakrithiskinandhairclinic.com/"
+            href="https://vedaskinandhair.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="

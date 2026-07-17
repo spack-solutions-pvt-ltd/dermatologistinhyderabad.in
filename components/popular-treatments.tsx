@@ -462,7 +462,7 @@ export default function PopularTreatments() {
                 />
 
                 <motion.a
-                  href="https://www.aakrithiskinandhairclinic.com/"
+                  href="https://vedaskinandhair.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   variants={buttonVariants}

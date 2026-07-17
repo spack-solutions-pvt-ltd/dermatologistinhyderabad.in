@@ -185,7 +185,7 @@ mx-auto sm:mx-0"
               <div className="sans-font flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-3 mt-3 sm:mt-4 md:mt-6 mx-auto sm:mx-0 w-full sm:w-auto">
                 {/* Book Appointment Button */}
                 <a
-                  href="https://www.aakrithiskinandhairclinic.com/"
+                  href="https://vedaskinandhair.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-text bg-linear-to-r from-[#E85222] to-[#FF7A1A] text-white px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-[#154f85]/30 transition-all duration-300 hover:scale-105 w-full sm:w-auto"

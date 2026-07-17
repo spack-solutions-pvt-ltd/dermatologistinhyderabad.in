@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { Calendar, Check, Shield, Sparkles, Clipboard, Clock, Award, Building } from "lucide-react";
-import image10 from "../asserts/image10.png";
+import img4 from "../asserts/img4.png";
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -258,7 +258,7 @@ export default function AboutSection() {
 
             {/* CTA Button with Gradient Effect */}
             <motion.a
-              href="https://www.aakrithiskinandhairclinic.com/"
+              href="https://vedaskinandhair.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -317,7 +317,7 @@ export default function AboutSection() {
             >
               {/* Clinic Image */}
               <Image
-                src={image10}
+                src={img4}
                 alt="Aakrithi Clinic Interior - Modern, Hygienic Facility"
                 fill
                 className="object-cover object-center"

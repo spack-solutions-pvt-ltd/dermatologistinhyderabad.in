@@ -24,7 +24,7 @@ export default function FeaturedProducts() {
     {
       icon: Users,
       title: "Experienced<br />Dermatologist",
-      description: "15+ years of experience in skin & hair care.",
+      description: "10 years of experience in skin & hair care.",
     },
     {
       icon: UserCircle,
