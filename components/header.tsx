@@ -145,7 +145,7 @@ export default function Header() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="https://www.aakrithiskinandhairclinic.com/"
+              // href="https://www.aakrithiskinandhairclinic.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-text bg-linear-to-r from-[#E85222] to-[#FF7A1A] text-white px-6 py-2.5 rounded-xl text-sm flex items-center gap-2 hover:shadow-lg hover:shadow-[#BC5841]/30 transition-all duration-300 hover:scale-105"
