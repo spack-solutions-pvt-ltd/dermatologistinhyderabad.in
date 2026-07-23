@@ -71,7 +71,7 @@ export default function Hero() {
         }
       `}</style>
 
-      <section className="flex items-center bg-[#FBF4EC] overflow-hidden py-4 md:py-6">
+      <section className="flex items-center bg-[#FBF4EC] overflow-hidden py-4 md:py-6" id="home">
         <div className="max-w-7xl mx-auto w-full px-3 sm:px-4 lg:px-10 pt-20 sm:pt-25">
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center">
             {/* LEFT - Content */}
